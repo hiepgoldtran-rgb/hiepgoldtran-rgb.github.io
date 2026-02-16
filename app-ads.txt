@@ -1,0 +1,5 @@
+# AdMob cho Giá Vàng Online
+google.com, pub-8386795729138351, DIRECT, f08c47fec0942fa0
+
+# AdMob cho Kết Quả Xổ Số Online (ví dụ nếu có mã pub khác)
+google.com, pub-8386795729138351, DIRECT, f08c47fec0942fa0
