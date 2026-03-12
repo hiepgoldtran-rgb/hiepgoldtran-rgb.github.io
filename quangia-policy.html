@@ -9,82 +9,128 @@
             font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
             line-height: 1.6;
             color: #333;
-            max-width: 800px;
+            max-width: 900px;
             margin: 0 auto;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #f4f7f6;
         }
         h1, h2, h3 {
             color: #2c3e50;
         }
         h1 {
-            border-bottom: 2px solid #3498db;
+            border-bottom: 3px solid #3498db;
             padding-bottom: 10px;
+            text-align: center;
         }
         .container {
             background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+        .update-date {
+            text-align: right;
+            font-style: italic;
+            color: #7f8c8d;
+            margin-bottom: 30px;
         }
         a {
             color: #3498db;
             text-decoration: none;
+            font-weight: 500;
         }
         a:hover {
             text-decoration: underline;
         }
         ul {
             margin-bottom: 20px;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        .section-title {
+            background-color: #ecf0f1;
+            padding: 10px 15px;
+            border-radius: 4px;
+            margin-top: 30px;
+        }
+        .highlight {
+            color: #e67e22;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Chính sách bảo mật (Privacy Policy)</h1>
-        <p><strong>Cập nhật lần cuối:</strong> 11/03/2026</p>
+        <div class="update-date">Cập nhật lần cuối: 12/03/2026</div>
 
-        <p>Cảm ơn bạn đã sử dụng ứng dụng <strong>Sổ Tài Sản (Asset Portfolio)</strong> ("Ứng dụng"). Chính sách bảo mật này giải thích cách chúng tôi thu thập, sử dụng, chia sẻ và bảo vệ thông tin cá nhân của bạn khi bạn sử dụng Ứng dụng.</p>
+        <p>Chào mừng bạn đến với <strong>Sổ Tài Sản (Asset Portfolio)</strong> ("Ứng dụng"). Chúng tôi cam kết bảo vệ quyền riêng tư và dữ liệu cá nhân của bạn. Chính sách bảo mật này mô tả cách chúng tôi thu thập, sử dụng, xử lý và bảo vệ thông tin của bạn khi bạn sử dụng dịch vụ của chúng tôi.</p>
 
-        <h2>1. Thu thập và sử dụng thông tin</h2>
-        <p>Để mang lại trải nghiệm tốt nhất cho bạn, trong quá trình sử dụng Ứng dụng, chúng tôi có thể yêu cầu bạn cung cấp một số thông tin cá nhân nhất định, bao gồm nhưng không giới hạn ở:</p>
+        <h2 class="section-title">1. Thông tin chúng tôi thu thập</h2>
+        <p>Để đảm bảo Ứng dụng hoạt động hiệu quả và cung cấp các tính năng cá nhân hóa, chúng tôi thu thập các loại dữ liệu sau:</p>
         <ul>
-            <li><strong>Thông tin xác thực tài khoản:</strong> Địa chỉ Email và Tên hiển thị (thông qua tính năng Đăng nhập bằng Google hoặc Đăng nhập bằng Apple).</li>
-            <li><strong>Dữ liệu tài sản:</strong> Thông tin do bạn nhập vào (ví dụ: bất động sản, tiền gửi, cổ phiếu, tiền điện tử, v.v.). Dữ liệu này chủ yếu được lưu trữ cục bộ trên thiết bị của bạn và đồng bộ lên nền tảng đám mây (Firebase) nếu bạn yêu cầu hoặc đăng nhập và liên kết tài khoản.</li>
-            <li><strong>Dữ liệu vị trí:</strong> Ứng dụng có thể sử dụng vị trí thiết bị của bạn hoặc vị trí bạn ghim để hiển thị bản đồ trực quan (thông qua MapTiler).</li>
+            <li><strong>Thông tin tài khoản (Đăng nhập):</strong> Khi bạn sử dụng Google Sign-In hoặc Apple ID, chúng tôi nhận được <strong>địa chỉ Email, Tên hiển thị và Ảnh đại diện (nếu có)</strong>. Thông tin này dùng để xác thực quyền sở hữu dữ liệu của bạn trên các thiết bị khác nhau.</li>
+            <li><strong>Dữ liệu tài sản người dùng:</strong> Toàn bộ dữ liệu về Bất động sản, Vàng, Tiền tệ, Cổ phiếu, v.v. do bạn trực tiếp nhập vào. Dữ liệu này được lưu trữ <strong>cục bộ</strong> trên thiết bị và được <strong>đồng bộ hóa lên máy chủ Firebase</strong> của chúng tôi khi bạn đăng nhập.</li>
+            <li><strong>Dữ liệu Vị trí:</strong> Nếu bạn kích hoạt tính năng bản đồ, Ứng dụng có thể truy cập tọa độ GPS hoặc vị trí bạn ghim để hiển thị tài sản trên bản đồ thông qua dịch vụ MapTiler.</li>
+            <li><strong>Thông tin thiết bị:</strong> Phiên bản hệ điều hành, kiểu máy, ID quảng cáo (AAID/IDFA) phục vụ cho việc vận hành kỹ thuật và báo cáo lỗi sự cố.</li>
         </ul>
 
-        <h2>2. Các dịch vụ của bên thứ ba</h2>
-        <p>Ứng dụng có sử dụng các dịch vụ của bên thứ ba, các dịch vụ này có thể thu thập thông tin dùng để nhận dạng bạn. Vui lòng xem chính sách bảo mật của các nhà cung cấp dịch vụ bên thứ ba được sử dụng trong Ứng dụng:</p>
+        <h2 class="section-title">2. Mục đích xử lý dữ liệu</h2>
+        <p>Chúng tôi sử dụng thông tin thu thập được cho các mục đích sau:</p>
         <ul>
-            <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Play Services & Firebase Analytics</a></li>
-            <li><a href="https://support.google.com/admob/answer/6128543?hl=en" target="_blank" rel="noopener noreferrer">Google AdMob (Dịch vụ Quảng cáo)</a></li>
-            <li><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase (Xác thực & Cloud Messaging)</a></li>
-            <li><a href="https://www.maptiler.com/privacy/" target="_blank" rel="noopener noreferrer">MapTiler (Dịch vụ Bản đồ)</a></li>
+            <li><strong>Cung cấp dịch vụ:</strong> Duy trì hoạt động cốt lõi của ứng dụng (quản lý danh mục, tính toán tổng tài sản).</li>
+            <li><strong>Đồng bộ hóa dữ liệu:</strong> Cho phép bạn truy cập dữ liệu tài sản của mình từ bất kỳ thiết bị nào thông qua tài khoản đã liên kết.</li>
+            <li><strong>Thông báo & Nhắc nhở:</strong> Gửi thông báo về biến động giá tài sản, ngày đáo hạn tiết kiệm hoặc nhắc nhở tất toán tài khoản (Thông qua Firebase Cloud Messaging).</li>
+            <li><strong>Cải thiện ứng dụng:</strong> Phân tích các lỗi (Crash logs) để khắc phục sự cố kỹ thuật và nâng cao trải nghiệm người dùng.</li>
         </ul>
-        <p>Đối với dịch vụ AdMob, Google có thể sử dụng ID quảng cáo để phân phối quảng cáo cá nhân hóa. Tuy nhiên, Ứng dụng của chúng tôi đã được thiết lập để yêu cầu các quảng cáo <strong>KHÔNG CÁ NHÂN HÓA (Non-Personalized Ads)</strong> làm mặc định nhằm tôn trọng quyền riêng tư của bạn.</p>
 
-        <h2>3. Dữ liệu Nhật ký (Log Data)</h2>
-        <p>Chúng tôi muốn thông báo cho bạn rằng mỗi khi bạn sử dụng dịch vụ của chúng tôi, trong trường hợp xảy ra lỗi trong Ứng dụng, chúng tôi có thể thu thập dữ liệu và thông tin (thông qua các sản phẩm của bên thứ ba) thống kê sự cố thiết bị của bạn được gọi là Dữ liệu Nhật ký. Dữ liệu này có thể bao gồm địa chỉ IP của thiết bị, tên thiết bị, phiên bản hệ điều hành, cấu hình của Ứng dụng khi gặp sự cố, và các dữ liệu thống kê khác.</p>
+        <h2 class="section-title">3. Các dịch vụ của bên thứ ba</h2>
+        <p>Ứng dụng tích hợp một số dịch vụ từ các đối tác uy tín để cung cấp tính năng. Các đối tác này có chính sách bảo mật riêng:</p>
+        <ul>
+            <li><strong>Google Firebase:</strong> Sử dụng để xác thực tài khoản (Authentication), lưu trữ dữ liệu đám mây (Cloud Firestore) và gửi thông báo. [<a href="https://firebase.google.com/support/privacy" target="_blank">Privacy Link</a>]</li>
+            <li><strong>Google AdMob:</strong> Hiển thị quảng cáo nhằm duy trì dịch vụ miễn phí. Chúng tôi ưu tiên hiển thị quảng cáo không cá nhân hóa và tuân thủ các quy định về GDPA/CCPA. [<a href="https://policies.google.com/privacy" target="_blank">Privacy Link</a>]</li>
+            <li><strong>MapTiler:</strong> Cung cấp bản đồ hiển thị tài sản. [<a href="https://www.maptiler.com/privacy/" target="_blank">Privacy Link</a>]</li>
+            <li><strong>Apple:</strong> Cung cấp dịch vụ xác thực ID của Apple. [<a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Link</a>]</li>
+        </ul>
 
-        <h2>4. Bảo mật dữ liệu</h2>
-        <p>Chúng tôi trân trọng sự tin tưởng của bạn trong việc cung cấp Thông tin Cá nhân cho chúng tôi. Do đó, chúng tôi nỗ lực sử dụng các phương thức hợp lý về mặt thương mại để bảo vệ thông tin này. Việc truyền tải dữ liệu giữa Ứng dụng và Firebase được mã hóa qua kết nối an toàn (HTTPS). Mặc dù vậy, không có phương thức truyền tải qua mạng Internet hoặc lưu trữ điện tử nào an toàn 100%, do đó chúng tôi không thể đảm bảo tính bảo mật tuyệt đối.</p>
+        <h2 class="section-title">4. Bảo mật và Lưu trữ dữ liệu</h2>
+        <p>Dữ liệu của bạn cực kỳ quan trọng đối với chúng tôi:</p>
+        <ul>
+            <li><strong>Mã hóa:</strong> Mọi dữ liệu truyền tải giữa thiết bị của bạn và máy chủ đám mây đều được mã hóa qua giao thức <strong>HTTPS/TLS</strong>.</li>
+            <li><strong>Lưu trữ:</strong> Dữ liệu đám mây được lưu trữ trên hạ tầng bảo mật tiêu chuẩn quốc tế của Google Cloud (Firebase).</li>
+            <li><strong>Quyền truy cập:</strong> Chúng tôi KHÔNG bán, KHÔNG cho thuê và KHÔNG chia sẻ dữ liệu tài chính cá nhân của bạn cho bất kỳ bên thứ ba nào vì mục đích thương mại.</li>
+        </ul>
 
-        <h2>5. Liên kết đến các trang web khác</h2>
-        <p>Dịch vụ này có thể chứa các liên kết đến các trang web khác. Nếu bạn nhấp vào liên kết của bên thứ ba, bạn sẽ được chuyển hướng đến trang web đó. Xin lưu ý rằng các trang web bên ngoài này không do chúng tôi điều hành. Do đó, chúng tôi khuyên bạn nên xem qua Chính sách Bảo mật của các trang web này.</p>
+        <h2 class="section-title">5. Quyền của người dùng</h2>
+        <p>Chúng tôi tôn trọng quyền kiểm soát của bạn đối với dữ liệu cá nhân:</p>
+        <ul>
+            <li><strong>Quyền truy cập & Chỉnh sửa:</strong> Bạn có thể xem và sửa đổi thông tin tài sản bất cứ lúc nào trong Ứng dụng.</li>
+            <li><strong>Quyền xuất dữ liệu:</strong> Bạn có quyền xuất (Export) dữ liệu tài sản của mình sang các định dạng tệp tin khác để lưu giữ cá nhân.</li>
+            <li><strong>Quyền xóa bỏ (Right to be Forgotten):</strong> Bạn có quyền yêu cầu xóa toàn bộ tài khoản và dữ liệu đã lưu trên đám mây. Xem chi tiết tại mục 6.</li>
+        </ul>
 
-        <h2>6. Quyền riêng tư của Trẻ em</h2>
-        <p>Các Dịch vụ này không hướng đến bất kỳ ai dưới 13 tuổi. Chúng tôi không cố ý thu thập thông tin nhận dạng cá nhân từ trẻ em dưới 13 tuổi. Nếu phát hiện trẻ em dưới 13 tuổi chia sẻ thông tin cá nhân với chúng tôi, chúng tôi sẽ lập tức xóa ngay lập tức khỏi máy chủ.</p>
+        <h2 class="section-title">6. Xóa tài khoản và dữ liệu (Data Deletion)</h2>
+        <p>Để đảm bảo tuân thủ chính sách của Google Play và quyền lợi người dùng:</p>
+        <ul>
+            <li>Bạn có thể thực hiện xóa tài khoản trực tiếp trong Ứng dụng tại: <strong>Cài đặt > Tài khoản > Xóa tài khoản</strong>. Khi thực hiện, toàn bộ dữ liệu trên Firebase (bao gồm Email, thông tin định danh và dữ liệu tài sản) sẽ bị xóa vĩnh viễn và không thể khôi phục.</li>
+            <li>Hoặc bạn có thể gửi yêu cầu xóa dữ liệu qua Email: <span class="highlight">hiepgoldtran@gmail.com</span>. Chúng tôi sẽ xử lý yêu cầu trong vòng 48 giờ làm việc.</li>
+        </ul>
 
-        <h2>7. Thay đổi Chính sách Bảo mật</h2>
-        <p>Chúng tôi có thể cập nhật Chính sách Bảo mật của mình theo thời gian. Do đó, bạn nên xem lại trang này định kỳ để biết mọi thay đổi. Chúng tôi sẽ thông báo cho bạn về bất kỳ thay đổi nào bằng cách đăng Chính sách Bảo mật mới trên trang này. Những thay đổi này có hiệu lực ngay lập tức sau khi chúng được đăng trên trang này.</p>
+        <h2 class="section-title">7. Quyền riêng tư của Trẻ em</h2>
+        <p>Ứng dụng này <strong>không</strong> dành cho trẻ em dưới 13 tuổi (hoặc độ tuổi tối thiểu theo quy định tại quốc gia của bạn). Chúng tôi không cố ý thu thập dữ liệu từ trẻ em. Nếu phát hiện có sự thu thập ngoài ý muốn, chúng tôi sẽ xóa bỏ ngay lập tức.</p>
 
-        <h2>8. Xóa tài khoản và dữ liệu</h2>
-        <p>Nếu bạn muốn xóa toàn bộ dữ liệu hoặc tài khoản của mình khỏi hệ thống đồng bộ đám mây (Firebase), bạn có thể sử dụng tùy chọn trong mục "Cài đặt" của Ứng dụng, hoặc liên hệ trực tiếp với chúng tôi ở địa chỉ bên dưới. Dữ liệu cục bộ trên điện thoại có thể bị xóa bằng cách Gỡ cài đặt (Uninstall) hoặc Clear Data của Ứng dụng tại màn hình Cài đặt của điện thoại.</p>
+        <h2 class="section-title">8. Thay đổi chính sách</h2>
+        <p>Chúng tôi có thể cập nhật chính sách này để phù hợp với các quy định pháp luật hoặc tính năng mới của Ứng dụng. Mọi thay đổi sẽ có hiệu lực ngay khi được đăng tải công khai trên trang này hoặc trong Ứng dụng.</p>
 
-        <h2>9. Liên hệ với chúng tôi</h2>
-        <p>Nếu bạn có bất kỳ câu hỏi hoặc góp ý nào về Chính sách Bảo mật của chúng tôi, đừng ngần ngại liên hệ:</p>
-        <p><strong>Email hỗ trợ:</strong> hiepgoldtran@gmail.com</p>
+        <h2 class="section-title">9. Liên hệ</h2>
+        <p>Mọi thắc mắc, khiếu nại hoặc yêu cầu xử lý dữ liệu, vui lòng liên hệ:</p>
+        <p>
+            <strong>Tác giả:</strong> Trần Hiệp<br>
+            <strong>Email:</strong> <a href="mailto:hiepgoldtran@gmail.com">hiepgoldtran@gmail.com</a><br>
+            <strong>Địa chỉ:</strong> Hà Nội, Việt Nam.
+        </p>
     </div>
 </body>
 </html>
