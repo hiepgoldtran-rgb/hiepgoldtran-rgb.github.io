@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lune - Privacy Policy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF4D6D;
+            --primary-light: #FFE4E8;
+            --text-dark: #1A1A1A;
+            --text-muted: #666;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            padding-top: 80px;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            z-index: 1000;
+            padding: 15px 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .logo span {
+            margin-right: 8px;
+            font-size: 28px;
+        }
+
+        .lang-switcher {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .lang-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #EEE;
+            background: var(--white);
+            color: var(--text-muted);
+        }
+
+        .lang-badge.active {
+            background: var(--primary-color);
+            color: var(--white);
+            border-color: var(--primary-color);
+        }
+
+        .lang-badge:hover:not(.active) {
+            background: var(--bg-light);
+            border-color: #DDD;
+        }
+
+        main {
+            padding: 40px 0 100px;
+        }
+
+        .content-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: var(--shadow);
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .policy-section {
+            display: none;
+        }
+
+        .policy-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .policy-block {
+            margin-bottom: 35px;
+        }
+
+        .policy-block h2 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            display: flex;
+            align-items: center;
+        }
+
+        .policy-block h2::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            background: var(--primary-color);
+            margin-right: 12px;
+            border-radius: 2px;
+        }
+
+        .policy-block p {
+            font-size: 16px;
+            color: var(--text-muted);
+            white-space: pre-wrap;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 600px) {
+            .content-card {
+                padding: 30px 20px;
+                border-radius: 0;
+                box-shadow: none;
+            }
+
+            body {
+                padding-top: 130px;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            .lang-switcher {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <a href="#" class="logo"><span>🌸</span>Lune</a>
+            <div class="lang-switcher">
+                <div class="lang-badge active" onclick="switchLang('en')">English</div>
+                <div class="lang-badge" onclick="switchLang('vi')">Tiếng Việt</div>
+                <div class="lang-badge" onclick="switchLang('zh')">中文</div>
+                <div class="lang-badge" onclick="switchLang('es')">Español</div>
+                <div class="lang-badge" onclick="switchLang('pt')">Português</div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="content-card">
+
+            <div id="policy-en" class="policy-section active">
+                <h1>Privacy Policy</h1>
+                <span class="last-updated">Last Updated: March 27, 2026</span>
+                <div class="policy-block">
+                    <h2>1. MEDICAL DISCLAIMER</h2>
+                    <p>The Lune app provides cycle tracking and personalized insights for informational purposes only.
+                        Lune is NOT a medical device. The information and "Smart Insights" provided by the app do not
+                        constitute medical advice, diagnosis, or treatment. Always consult a qualified healthcare
+                        provider or physician for any medical concerns or before making medical decisions.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>2. DATA COLLECTION</h2>
+                    <p>Your privacy is our priority. By default, all health data (periods, symptoms, moods) is stored
+                        LOCALLY on your device. We do not collect this personal data unless you enable Cloud Backup.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>3. HEALTH CONNECT & DEVICE HEALTH DATA</h2>
+                    <p>If you grant permission, Lune may read/write data to Google Fit, Health Connect, or Apple Health
+                        (such as sleep and steps) to provide better insights. We strictly comply with Google's Health
+                        Connect API policies and Apple's HealthKit guidelines. <strong>Data obtained through these APIs
+                            is never used for advertising, marketing, or sold to data brokers.</strong></p>
+                </div>
+                <div class="policy-block">
+                    <h2>4. BACKUP AND SYNC (PREMIUM)</h2>
+                    <p>When you subscribe to Premium and enable backup, your data is synced to our servers to protect it
+                        if you lose or change devices. This data is transmitted securely and is strictly linked to your
+                        account identity.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>5. NO THIRD-PARTY SHARING</h2>
+                    <p>We never sell, rent, or share your sensitive health data with any third parties, advertisers, or
+                        analytics networks. Your data is used solely to provide tracking and insight features to you
+                        within the app.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>6. USER CONTROL & DATA DELETION</h2>
+                    <p>You can delete all your data at any time via the app's Settings -> Account -> Delete Data. Once
+                        requested, data is permanently and immediately removed from both your device and our active
+                        servers.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>7. SECURITY</h2>
+                    <p>We use industry-standard security measures to protect the app, including support for PIN lock and
+                        bio-authentication (FaceID/Fingerprint - Discreet Mode).</p>
+                </div>
+                <div class="policy-block">
+                    <h2>8. CONTACT US</h2>
+                    <p>If you have any questions about this Privacy Policy or wish to make a data deletion request
+                        manually, please contact our Data Protection Officer at: <strong>hiepgoldtran@gmail.com</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div id="policy-vi" class="policy-section">
+                <h1>Chính sách bảo mật</h1>
+                <span class="last-updated">Cập nhật lần cuối: 27 tháng 3, 2026</span>
+                <div class="policy-block">
+                    <h2>1. MIỄN TRỪ TRÁCH NHIỆM Y TẾ</h2>
+                    <p>Ứng dụng Lune cung cấp tính năng theo dõi chu kỳ và thông tin cá nhân hóa (Smart Insights) chỉ
+                        mang tính chất tham khảo. Lune KHÔNG phải là thiết bị y tế. Thông tin do ứng dụng cung cấp không
+                        thay thế cho lời khuyên, chẩn đoán hoặc điều trị y tế chuyên môn. Luôn tham khảo ý kiến bác sĩ
+                        hoặc chuyên gia y tế cho các vấn đề sức khỏe hoặc trước khi đưa ra quyết định y tế.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>2. THU THẬP DỮ LIỆU</h2>
+                    <p>Sự riêng tư của bạn là ưu tiên tuyệt đối. Mặc định, tất cả dữ liệu sức khỏe của bạn (kỳ kinh,
+                        triệu chứng, tâm trạng) được lưu trữ CỤC BỘ trên thiết bị của bạn. Chúng tôi không thu thập dữ
+                        liệu cá nhân này trừ khi bạn bật tính năng Sao lưu đám mây.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>3. DỮ LIỆU TỪ HEALTH CONNECT & GOOGLE FIT</h2>
+                    <p>Nếu bạn cấp quyền, Lune có thể đọc/ghi dữ liệu vào Google Fit, Health Connect hoặc Apple Health
+                        (như giấc ngủ, bước chân). Chúng tôi tuân thủ nghiêm ngặt chính sách API của Google và Apple.
+                        <strong>Dữ liệu lấy từ các nền tảng này tuyệt đối không bao giờ được sử dụng cho mục đích quảng
+                            cáo, tiếp thị hoặc bán cho bên môi giới dữ liệu.</strong>
+                    </p>
+                </div>
+                <div class="policy-block">
+                    <h2>4. SAO LƯU VÀ ĐỒNG BỘ (PREMIUM)</h2>
+                    <p>Khi bạn bật tính năng sao lưu (Cloud Sync), dữ liệu của bạn sẽ được đồng bộ lên máy chủ của chúng
+                        tôi để bảo vệ dữ liệu khi bạn mất máy. Dữ liệu này được truyền tải an toàn và chỉ gắn liền với
+                        định danh tài khoản của bạn.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>5. KHÔNG CHIA SẺ VỚI BÊN THỨ BA</h2>
+                    <p>Chúng tôi cam kết KHÔNG BAO GIỜ bán, cho thuê hoặc chia sẻ dữ liệu sức khỏe nhạy cảm của bạn cho
+                        bên thứ ba, nhà quảng cáo hay mạng phân tích nào. Dữ liệu chỉ phục vụ mục đích cung cấp tính
+                        năng theo dõi cho chính bạn.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>6. QUYỀN KIỂM SOÁT & XÓA DỮ LIỆU</h2>
+                    <p>Bạn có toàn quyền xóa toàn bộ dữ liệu bất cứ lúc nào trong Cài đặt -> Tài khoản -> Xóa dữ liệu.
+                        Sau khi yêu cầu, dữ liệu sẽ bị gỡ bỏ vĩnh viễn khỏi thiết bị và máy chủ hoạt động của chúng tôi.
+                    </p>
+                </div>
+                <div class="policy-block">
+                    <h2>7. BẢO MẬT</h2>
+                    <p>Chúng tôi áp dụng các biện pháp bảo mật tiêu chuẩn ngành để bảo vệ ứng dụng, bao gồm hỗ trợ khóa
+                        bằng mã PIN hoặc sinh trắc học (FaceID/Vân tay - Chế độ ngụy trang).</p>
+                </div>
+                <div class="policy-block">
+                    <h2>8. LIÊN HỆ VỚI CHÚNG TÔI</h2>
+                    <p>Nếu bạn có bất kỳ câu hỏi nào về Chính sách bảo mật này hoặc muốn yêu cầu xóa dữ liệu thủ công,
+                        vui lòng liên hệ với chúng tôi qua email: <strong>hiepgoldtran@gmail.com</strong></p>
+                </div>
+            </div>
+
+            <div id="policy-zh" class="policy-section">
+                <h1>隐私政策</h1>
+                <span class="last-updated">最后更新: 2026年3月27日</span>
+                <div class="policy-block">
+                    <h2>1. 医疗免责声明</h2>
+                    <p>Lune 应用程序仅提供周期跟踪和个性化洞察供参考。Lune 不是医疗设备。该应用程序提供的信息不构成医疗建议、诊断或治疗。在做出任何医疗决定之前，请务必咨询合格的医疗保健提供者。</p>
+                </div>
+                <div class="policy-block">
+                    <h2>2. 数据收集</h2>
+                    <p>您的隐私是我们的首要任务。默认情况下，所有健康数据都存储在您的设备本地。除非您启用云备份，否则我们不会收集这些数据。</p>
+                </div>
+                <div class="policy-block">
+                    <h2>3. HEALTH CONNECT & 设备健康数据</h2>
+                    <p>如果您授予权限，Lune 可能会与 Google Fit 或 Health Connect 进行数据读写。我们严格遵守 Google 的政策。<strong>通过这些 API
+                            获得的数据绝不会用于广告、营销或出售给数据经纪人。</strong></p>
+                </div>
+                <div class="policy-block">
+                    <h2>4. 备份与同步</h2>
+                    <p>启用备份后，您的数据将安全地同步到我们的服务器，以防设备丢失。</p>
+                </div>
+                <div class="policy-block">
+                    <h2>5. 不与第三方共享</h2>
+                    <p>我们从不向任何第三方或广告商出售或共享您的敏感健康数据。</p>
+                </div>
+                <div class="policy-block">
+                    <h2>6. 数据删除</h2>
+                    <p>您可以随时在应用设置中删除所有数据。删除后，数据将从设备和服务器中永久移除。</p>
+                </div>
+                <div class="policy-block">
+                    <h2>7. 安全性</h2>
+                    <p>我们采用行业标准的安全措施（包括 PIN 码和 FaceID 锁）来保护您的应用。</p>
+                </div>
+                <div class="policy-block">
+                    <h2>8. 联系我们</h2>
+                    <p>如有关于隐私政策的疑问或数据删除请求，请联系：<strong>hiepgoldtran@gmail.com</strong></p>
+                </div>
+            </div>
+
+            <div id="policy-es" class="policy-section">
+                <h1>Política de Privacidad</h1>
+                <span class="last-updated">Última actualización: 27 de marzo de 2026</span>
+                <div class="policy-block">
+                    <h2>1. DESCARGO DE RESPONSABILIDAD MÉDICA</h2>
+                    <p>La aplicación Lune proporciona seguimiento y sugerencias solo con fines informativos. NO es un
+                        dispositivo médico. La información no constituye consejo, diagnóstico o tratamiento médico.
+                        Consulte siempre a un médico para sus problemas de salud.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>2. RECOLECCIÓN DE DATOS</h2>
+                    <p>Por defecto, todos los datos de salud se almacenan LOCALMENTE. No recopilamos estos datos a menos
+                        que active el Respaldo en la Nube.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>3. DATOS DE HEALTH CONNECT</h2>
+                    <p>Si otorga permiso, Lune puede usar datos de Google Fit o Health Connect. Cumplimos estrictamente
+                        con las políticas de Google. <strong>Estos datos NUNCA se utilizan para publicidad ni se venden
+                            a terceros.</strong></p>
+                </div>
+                <div class="policy-block">
+                    <h2>4. RESPALDO Y SINCRONIZACIÓN</h2>
+                    <p>Sus datos se sincronizan de forma segura en nuestros servidores para protegerlos en caso de
+                        pérdida del dispositivo.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>5. NO SE COMPARTE CON TERCEROS</h2>
+                    <p>Nunca vendemos ni compartimos sus datos de salud con terceros ni anunciantes.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>6. ELIMINACIÓN DE DATOS</h2>
+                    <p>Puede eliminar todos sus datos permanentemente desde la Configuración de la aplicación en
+                        cualquier momento.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>7. SEGURIDAD</h2>
+                    <p>Protegemos la aplicación mediante bloqueo por PIN y biometría (FaceID/Huella).</p>
+                </div>
+                <div class="policy-block">
+                    <h2>8. CONTÁCTENOS</h2>
+                    <p>Para preguntas sobre privacidad o solicitudes de eliminación, contáctenos en:
+                        <strong>hiepgoldtran@gmail.com</strong>
+                    </p>
+                </div>
+            </div>
+
+            <div id="policy-pt" class="policy-section">
+                <h1>Política de Privacidade</h1>
+                <span class="last-updated">Última atualização: 27 de março de 2026</span>
+                <div class="policy-block">
+                    <h2>1. AVISO MÉDICO</h2>
+                    <p>O aplicativo Lune fornece rastreamento apenas para fins informativos. NÃO é um dispositivo
+                        médico. As informações não constituem aconselhamento, diagnóstico ou tratamento médico. Consulte
+                        sempre um médico.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>2. COLETA DE DADOS</h2>
+                    <p>Por padrão, os dados de saúde são armazenados LOCALMENTE. Não coletamos os dados a menos que você
+                        ative o Backup.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>3. DADOS DO HEALTH CONNECT</h2>
+                    <p>Se autorizado, o Lune pode ler/gravar dados no Google Fit ou Health Connect. <strong>Cumprimos as
+                            políticas do Google e esses dados NUNCA são usados para publicidade ou vendidos.</strong>
+                    </p>
+                </div>
+                <div class="policy-block">
+                    <h2>4. BACKUP E SINCRONIZAÇÃO</h2>
+                    <p>Seus dados são sincronizados com segurança em nossos servidores para protegê-los.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>5. NÃO COMPARTILHAMENTO</h2>
+                    <p>Nunca vendemos ou compartilhamos seus dados de saúde com terceiros ou anunciantes.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>6. EXCLUSÃO DE DADOS</h2>
+                    <p>Você pode excluir permanentemente todos os seus dados a qualquer momento nas Configurações.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>7. SEGURANÇA</h2>
+                    <p>O aplicativo suporta bloqueio por PIN ou autenticação biométrica.</p>
+                </div>
+                <div class="policy-block">
+                    <h2>8. CONTATE-NOS</h2>
+                    <p>Para dúvidas de privacidade ou solicitações de exclusão, contate:
+                        <strong>hiepgoldtran@gmail.com</strong>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            &copy; 2026 Lune App. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        function updateActiveBadge(lang) {
+            const badges = document.querySelectorAll('.lang-badge');
+            badges.forEach(b => b.classList.remove('active'));
+            if (lang === 'en') badges[0].classList.add('active');
+            else if (lang === 'vi') badges[1].classList.add('active');
+            else if (lang === 'zh') badges[2].classList.add('active');
+            else if (lang === 'es') badges[3].classList.add('active');
+            else if (lang === 'pt') badges[4].classList.add('active');
+        }
+
+        function switchLang(lang, updateHash = true) {
+            updateActiveBadge(lang);
+
+            // Show content
+            document.querySelectorAll('.policy-section').forEach(el => {
+                el.classList.remove('active');
+            });
+            const target = document.getElementById('policy-' + lang);
+            if (target) {
+                target.classList.add('active');
+                if (updateHash) {
+                    window.location.hash = lang;
+                }
+            }
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Handle initial load with hash
+        window.addEventListener('load', () => {
+            const hash = window.location.hash.replace('#', '');
+            const validLangs = ['en', 'vi', 'zh', 'es', 'pt'];
+            if (hash && validLangs.includes(hash)) {
+                switchLang(hash, false);
+            }
+        });
+
+        // Handle browser back/forward
+        window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.replace('#', '');
+            const validLangs = ['en', 'vi', 'zh', 'es', 'pt'];
+            if (hash && validLangs.includes(hash)) {
+                switchLang(hash, false);
+            }
+        });
+    </script>
+</body>
+
+</html>
