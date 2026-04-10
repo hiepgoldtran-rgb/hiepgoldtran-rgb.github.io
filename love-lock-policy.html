@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Lock - Privacy Policy & Terms of Service</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --bg: #fdfbfb;
+            --text-dark: #2f3542;
+            --text-light: #747d8c;
+            --card-bg: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        body.dark-mode {
+            --bg: #1e272e;
+            --text-dark: #f1f2f6;
+            --text-light: #a4b0be;
+            --card-bg: #2f3542;
+        }
+
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            background: var(--card-bg);
+            border: 1px solid var(--text-light);
+            color: var(--text-dark);
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            border-color: var(--primary);
+            color: white;
+        }
+
+        .content-section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        h2 {
+            color: var(--text-dark);
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Love Lock</h1>
+        <p>Privacy Policy & Terms of Service</p>
+    </header>
+
+    <div class="language-selector">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('vi')">Tiếng Việt</button>
+        <button class="lang-btn" onclick="switchLanguage('zh')">中文</button>
+        <button class="lang-btn" onclick="switchLanguage('es')">Español</button>
+        <button class="lang-btn" onclick="switchLanguage('pt')">Português</button>
+    </div>
+
+    <!-- ENGLISH (DEFAULT) -->
+    <div id="content-en" class="content-section active">
+        <h2>Privacy Policy</h2>
+        <p><strong>Effective Date:</strong> Ongoing</p>
+        <p>Welcome to Love Lock ("we", "our", "us"). We respect your privacy and are committed to protecting it. This Privacy Policy outlines how we collect, use, and share your data when you use the Love Lock mobile application.</p>
+
+        <h3>1. Information We Collect & Why</h3>
+        <ul>
+            <li><strong>Account Information:</strong> We collect your Google or Apple ID information, email, and nickname to create your account and pair you with a partner.</li>
+            <li><strong>Location Data (Foreground & Background):</strong> We collect your precise location to allow you to create "Virtual Locks" on the love map. With your explicit permission, we collect background location data to send you notifications when you are near previously saved memories.</li>
+            <li><strong>Photos & Media:</strong> We collect images you upload for Virtual Locks and Stories to share exclusively with your paired partner.</li>
+            <li><strong>Health Data:</strong> If you use the period tracking feature, this data is stored securely and only shared with your partner if you choose to do so.</li>
+        </ul>
+
+        <h3>2. How We Share Data</h3>
+        <p>Your data is strictly shared <strong>only with your explicitly paired partner</strong>. We use third-party services (like Firebase for database/storage and MapTiler for mapping) solely to operate the app. We do not sell your personal data to advertisers.</p>
+
+        <h3>3. Data Retention & Deletion</h3>
+        <p>Your data is retained as long as your account is active. You can completely delete your account and all associated data at any time by navigating to <strong>Settings > Delete Account</strong> within the app. Doing so instantly removes your identifying data from our servers.</p>
+
+        <h2>Terms of Service & Disclaimer</h2>
+        <h3>1. User Generated Content (UGC) Policy</h3>
+        <p>Love Lock strictly prohibits the upload of objectionable content or abusive behavior. Users must not upload illegal, pornographic, or hateful content. You can disconnect from a partner or report their content inside the app. We reserve the right to ban users who violate these rules.</p>
+        
+        <h3>2. Health Disclaimer</h3>
+        <p>The menstrual cycle tracking feature is for informational purposes only and is <strong>not intended to substitute professional medical advice, diagnosis, or treatment.</strong></p>
+
+        <h3>3. Liability Disclaimer</h3>
+        <p>Love Lock is provided "as is". We are not responsible for any disputes, damages, or issues arising from your use of the application or the sharing of your data with your chosen partner.</p>
+        
+        <p><em>Contact Us: If you have any questions, please contact the developer at <strong>hiepgoldtran@gmail.com</strong>.</em></p>
+    </div>
+
+    <!-- VIETNAMESE -->
+    <div id="content-vi" class="content-section">
+        <h2>Chính sách Quyền riêng tư</h2>
+        <p>Chào mừng bạn đến với Love Lock ("chúng tôi"). Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ nó. Chính sách này phác thảo cách chúng tôi thu thập, sử dụng và chia sẻ dữ liệu của bạn khi sử dụng ứng dụng di động Love Lock.</p>
+
+        <h3>1. Thông tin chúng tôi thu thập và Lý do</h3>
+        <ul>
+            <li><strong>Thông tin Tài khoản:</strong> Chúng tôi thu thập thông tin Google hoặc Apple ID, email và tên gọi của bạn để tạo tài khoản và kết nối bạn với đối tác của mình.</li>
+            <li><strong>Dữ liệu Vị trí (Kể cả chạy ngầm):</strong> Chúng tôi thu thập vị trí chính xác để bạn tạo "Ổ khóa ảo" trên bản đồ tình yêu. Nếu bạn cấp quyền, chúng tôi thu thập vị trí chạy ngầm để gửi thông báo khi bạn đến gần những kỷ niệm đã lưu.</li>
+            <li><strong>Hình ảnh & Phương tiện:</strong> Chúng tôi thu thập hình ảnh bạn đăng tải trong Nhật ký để chia sẻ riêng tư độc quyền với đối tác của bạn.</li>
+            <li><strong>Dữ liệu Sức khỏe:</strong> Nếu bạn sử dụng tính năng theo dõi chu kỳ, dữ liệu này được lưu trữ an toàn và chỉ chia sẻ với đối tác nếu bạn cho phép.</li>
+        </ul>
+
+        <h3>2. Cách chúng tôi chia sẻ dữ liệu</h3>
+        <p>Dữ liệu của bạn <strong>chỉ được chia sẻ với người đối tác mà bạn đã kết nối</strong>. Chúng tôi sử dụng các dịch vụ bên thứ ba (như Firebase và MapTiler) chỉ để vận hành ứng dụng. Chúng tôi không bán dữ liệu của bạn cho nhà quảng cáo.</p>
+
+        <h3>3. Lưu giữ và Xóa dữ liệu (Xóa Tài khoản)</h3>
+        <p>Dữ liệu được lưu giữ khi tài khoản còn hoạt động. Bạn có quyền xóa toàn bộ tài khoản và dữ liệu bất cứ lúc nào bằng cách vào <strong>Cài đặt > Xóa Tài khoản</strong> trong ứng dụng. Quá trình này sẽ xóa dữ liệu nhận dạng của bạn khỏi máy chủ ngay lập tức.</p>
+
+        <h2>Điều khoản Dịch vụ & Miễn trừ Trách nhiệm</h2>
+        <h3>1. Chính sách Nội dung Người dùng (UGC)</h3>
+        <p>Love Lock nghiêm cấm đăng tải các nội dung phản cảm hoặc hành vi lạm dụng. Người dùng không được tải lên nội dung bất hợp pháp, khiêu dâm hoặc thù địch. Bạn có thể ngắt kết nối với đối tác hoặc báo cáo vi phạm trong ứng dụng. Chúng tôi có quyền khóa vĩnh viễn các tài khoản vi phạm.</p>
+        
+        <h3>2. Miễn trừ Sức khỏe</h3>
+        <p>Tính năng theo dõi chu kỳ sức khỏe chỉ mang tính tham khảo và <strong>không thay thế cho lời khuyên, chẩn đoán hoặc điều trị y tế chuyên nghiệp.</strong></p>
+
+        <h3>3. Miễn trừ Trách nhiệm</h3>
+        <p>Ứng dụng Love Lock được cung cấp nguyên trạng. Chúng tôi không chịu trách nhiệm pháp lý đối với các tranh chấp, thiệt hại hoặc vấn đề phát sinh từ việc sử dụng ứng dụng hoặc việc chia sẻ dữ liệu giữa bạn và đối tác.</p>
+        <p><em>Liên hệ: Nếu bạn có bất kỳ câu hỏi nào, vui lòng liên hệ nhà phát triển tại <strong>hiepgoldtran@gmail.com</strong>.</em></p>
+    </div>
+
+    <!-- CHINESE -->
+    <div id="content-zh" class="content-section">
+        <h2>隐私政策</h2>
+        <p>欢迎使用 Love Lock (“我们”)。我们尊重您的隐私。本隐私政策概述了我们如何收集、使用和共享您的数据。</p>
+
+        <h3>1. 我们收集的信息及原因</h3>
+        <ul>
+            <li><strong>帐户信息：</strong>我们收集您的 Google/Apple ID 以创建帐户并将您与其伴侣配对。</li>
+            <li><strong>位置数据（前台和后台）：</strong>我们收集您的精确位置以允许您创建“虚拟爱情锁”。在获得您明确授权后，我们会收集后台位置数据，以便在您靠近美好回忆地点时发送通知。</li>
+            <li><strong>照片和媒体：</strong>您上传给虚拟锁和日记的照片仅与您配对的伴侣共享。</li>
+            <li><strong>健康数据：</strong>经期数据会安全存储，您可以选择性与伴侣共享。</li>
+        </ul>
+
+        <h3>2. 我们如何共享数据</h3>
+        <p>您的数据<strong>仅与您配对的伴侣共享</strong>。我们不会将您的数据出售给广告商。</p>
+
+        <h3>3. 帐户和数据删除</h3>
+        <p>您可以随时在应用程序中的<strong>设置 > 删除帐户</strong>彻底删除您的帐户和所有相关数据。这会立即从我们的服务器中清除所有个人信息。</p>
+
+        <h2>服务条款与免责声明</h2>
+        <h3>1. 用户生成内容（UGC）政策</h3>
+        <p>严禁上传令人反感的内容。用户不得上传非法、色情或仇恨内容。您可以在应用程序内随时断开伴侣连接或举报此人。我们保留封禁违规用户的权利。</p>
+        
+        <h3>2. 健康免责声明</h3>
+        <p>生理期追踪功能仅供参考，<strong>不能替代专业的医疗建议、诊断或治疗。</strong></p>
+
+        <h3>3. 责任免责声明</h3>
+        <p>应用程序按“原样”提供。我们对您与伴侣共享数据而引起的任何纠纷或损害不承担任何责任。</p>
+        <p><em>联系我们：如有任何问题，请通过 <strong>hiepgoldtran@gmail.com</strong> 联系开发人员。</em></p>
+    </div>
+
+    <!-- SPANISH -->
+    <div id="content-es" class="content-section">
+        <h2>Política de Privacidad</h2>
+        <p>Bienvenido a Love Lock ("nosotros"). Respetamos su privacidad. Esta Política describe cómo recopilamos, usamos y compartimos sus datos.</p>
+
+        <h3>1. Información que recopilamos y por qué</h3>
+        <ul>
+            <li><strong>Información de la cuenta:</strong> Recopilamos información de Google o Apple ID para crear su cuenta y emparejarlo con su pareja.</li>
+            <li><strong>Datos de ubicación (Fondo y Primer Plano):</strong> Recopilamos su ubicación precisa para crear "Cerraduras virtuales". Con su permiso, recopilamos la ubicación en segundo plano para enviarle notificaciones cuando esté cerca de recuerdos guardados.</li>
+            <li><strong>Fotos y Medios:</strong> Las imágenes se comparten exclusivamente con su pareja.</li>
+            <li><strong>Datos de salud:</strong> Los datos del ciclo menstrual se almacenan de forma segura y solo se comparten con su pareja si usted lo desea.</li>
+        </ul>
+
+        <h3>2. Eliminación de datos y cuenta</h3>
+        <p>Puede eliminar completamente su cuenta y todos los datos asociados en cualquier momento navegando a <strong>Configuración > Eliminar cuenta</strong> dentro de la aplicación.</p>
+
+        <h2>Términos de Servicio y Descargo de Responsabilidad</h2>
+        <h3>1. Política de Contenido Generado por el Usuario (UGC)</h3>
+        <p>Love Lock prohíbe el contenido objetable o el comportamiento abusivo. No suba contenido ilegal, pornográfico o de odio. Puede desconectarse de una pareja o reportarlo en la app. Prohibiremos a los infractores.</p>
+        
+        <h3>2. Descargo de Responsabilidad de Salud</h3>
+        <p>La función de seguimiento del ciclo es solo informativa y <strong>no pretende sustituir el consejo médico profesional.</strong></p>
+
+        <h3>3. Descargo de Responsabilidad</h3>
+        <p>Love Lock se proporciona "tal cual". No somos responsables de disputas o daños que surjan de su uso de la aplicación.</p>
+        <p><em>Contáctenos: Si tiene alguna pregunta, comuníquese con el desarrollador en <strong>hiepgoldtran@gmail.com</strong>.</em></p>
+    </div>
+
+    <!-- PORTUGUESE -->
+    <div id="content-pt" class="content-section">
+        <h2>Política de Privacidade</h2>
+        <p>Bem-vindo ao Love Lock ("nós"). Nós respeitamos sua privacidade. Esta política descreve como coletamos e usamos seus dados.</p>
+
+        <h3>1. Informações que coletamos e por que</h3>
+        <ul>
+            <li><strong>Informações da conta:</strong> Coletamos informações do Google ou Apple ID para conectar você ao seu parceiro.</li>
+            <li><strong>Dados de Localização (Primeiro plano e fundo):</strong> Coletamos sua localização para que você crie "Cadeados Virtuais". Com sua permissão explícita, usamos a localização em segundo plano para enviar notificações perto de suas memórias.</li>
+            <li><strong>Fotos e Mídia:</strong> Compartilhado exclusivamente com o parceiro conectado.</li>
+            <li><strong>Dados de Saúde:</strong> O ciclo menstrual é privado e opcionalmente compartilhado via app.</li>
+        </ul>
+
+        <h3>2. Exclusão de Conta e Dados</h3>
+        <p>Você pode excluir sua conta e seus dados a qualquer momento em <strong>Configurações > Excluir Conta</strong> no aplicativo.</p>
+
+        <h2>Termos de Serviço e Isenção de Responsabilidade</h2>
+        <h3>1. Política de Conteúdo Gerado pelo Usuário (UGC)</h3>
+        <p>É proibido enviar conteúdo ilegal, de ódio ou adulto. Você pode denunciar ou bloquear parceiros dentro do aplicativo. Reservamo-nos o direito de banir infratores.</p>
+        
+        <h3>2. Isenção de Saúde</h3>
+        <p>O rastreamento menstrual é apenas para fins informativos e <strong>não substitui aconselhamento médico.</strong></p>
+
+        <h3>3. Isenção Geral</h3>
+        <p>O aplicativo é fornecido "como está". Não somos responsáveis ​​por problemas no relacionamento ou perda de dados pessoais decrescentes do mau uso.</p>
+        <p><em>Contato: Se você tiver alguma dúvida, entre em contato com o desenvolvedor em <strong>hiepgoldtran@gmail.com</strong>.</em></p>
+    </div>
+</div>
+
+<script>
+    function switchLanguage(langId) {
+        // Remove active class from all buttons and sections
+        document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+        document.querySelectorAll('.content-section').forEach(sec => sec.classList.remove('active'));
+
+        // Add active class to clicked button
+        event.target.classList.add('active');
+
+        // Show selected content
+        document.getElementById('content-' + langId).classList.add('active');
+    }
+
+    // Attempt to respect system dark mode preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark-mode');
+    }
+</script>
+
+</body>
+</html>
