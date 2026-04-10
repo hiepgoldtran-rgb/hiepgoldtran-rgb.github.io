@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account & Data Deletion | Love Lock</title>
+    <style>
+        :root {
+            --primary: #ff4757;
+            --primary-soft: #ff6b81;
+            --bg: #fdfbfb;
+            --text-dark: #2f3542;
+            --text-light: #747d8c;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            max-width: 550px;
+            width: 100%;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .language-selector {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .lang-btn {
+            background: #f1f2f6;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 100px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            color: var(--text-light);
+            transition: all 0.2s;
+        }
+
+        .lang-btn.active {
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+        }
+
+        .content-section {
+            display: none;
+        }
+
+        .content-section.active {
+            display: block;
+            animation: fadeIn 0.4s ease-out;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        p {
+            color: var(--text-light);
+            margin-bottom: 30px;
+            font-size: 0.95rem;
+        }
+
+        .btn-submit {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, background 0.2s;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
+        }
+
+        .btn-submit:hover {
+            background: var(--primary-soft);
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: #a4b0be;
+            border-top: 1px solid #f1f2f6;
+            padding-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 480px) {
+            .card { padding: 30px 20px; }
+            h1 { font-size: 1.3rem; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div class="logo">Love Lock</div>
+    
+    <div class="language-selector">
+        <button class="lang-btn active" onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('vi')">VI</button>
+        <button class="lang-btn" onclick="setLang('zh')">ZH</button>
+        <button class="lang-btn" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('pt')">PT</button>
+    </div>
+
+    <!-- EN -->
+    <div id="en" class="content-section active">
+        <h1>Account & Data Deletion</h1>
+        <p>Your privacy is our priority. By submitting a deletion request, all your shared memories, love map locks, location history, and health tracking data will be permanently removed from our servers within 72 hours.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS3iT5HozMZecx3SF61Wh4dRZMcLMvAIaTs6wetxLyOeHZwA/viewform?usp=header" class="btn-submit">Submit Deletion Request</a>
+    </div>
+
+    <!-- VI -->
+    <div id="vi" class="content-section">
+        <h1>Yêu cầu xóa tài khoản & dữ liệu</h1>
+        <p>Chúng tôi tôn trọng quyền riêng tư của bạn. Khi gửi yêu cầu, toàn bộ kỷ niệm chung, ổ khóa tình yêu, lịch sử vị trí và dữ liệu sức khỏe của bạn sẽ bị xóa vĩnh viễn khỏi máy chủ trong vòng 72 giờ.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS3iT5HozMZecx3SF61Wh4dRZMcLMvAIaTs6wetxLyOeHZwA/viewform?usp=header" class="btn-submit">Điền form yêu cầu xóa</a>
+    </div>
+
+    <!-- ZH -->
+    <div id="zh" class="content-section">
+        <h1>帐户与数据删除</h1>
+        <p>我们非常重视您的隐私。提交删除请求后，您所有的共享回忆、爱情地图记号、位置历史和健康追踪数据将在 72 小时内从我们的服务器中永久删除。</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS3iT5HozMZecx3SF61Wh4dRZMcLMvAIaTs6wetxLyOeHZwA/viewform?usp=header" class="btn-submit">提交删除请求</a>
+    </div>
+
+    <!-- ES -->
+    <div id="es" class="content-section">
+        <h1>Eliminación de cuenta y datos</h1>
+        <p>Tu privacidad là nuestra prioridad. Al enviar esta solicitud, todos tus recuerdos compartidos, candados en el mapa, historial de ubicación y datos de salud serán eliminados permanentemente de nuestros servidores en 72 horas.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS3iT5HozMZecx3SF61Wh4dRZMcLMvAIaTs6wetxLyOeHZwA/viewform?usp=header" class="btn-submit">Enviar solicitud de eliminación</a>
+    </div>
+
+    <!-- PT -->
+    <div id="pt" class="content-section">
+        <h1>Exclusão de conta e dados</h1>
+        <p>Sua privacidade é nossa prioridade. Ao enviar uma solicitação, todas as suas memórias compartilhadas, cadeados do mapa, histórico de localização e dados de saúde serão removidos permanentemente de nossos servidores dentro de 72 horas.</p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdS3iT5HozMZecx3SF61Wh4dRZMcLMvAIaTs6wetxLyOeHZwA/viewform?usp=header" class="btn-submit">Enviar solicitação de exclusão</a>
+    </div>
+
+    <div class="footer">
+        © 2026 Love Lock Team. All rights reserved.
+    </div>
+</div>
+
+<script>
+    function setLang(lang) {
+        document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+        
+        event.target.classList.add('active');
+        document.getElementById(lang).classList.add('active');
+    }
+</script>
+
+</body>
+</html>
