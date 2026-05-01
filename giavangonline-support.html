@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ người dùng - Giá Vàng Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #f39c12;
+            --text-color: #2c3e50;
+            --bg-color: #f9fbfd;
+            --card-bg: #ffffff;
+            --accent-color: #e67e22;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--card-bg);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 16px;
+        }
+
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            font-size: 1.4rem;
+            margin-top: 30px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .contact-card {
+            background: #fff8f0;
+            padding: 25px;
+            border-radius: 12px;
+            margin-top: 20px;
+            border: 1px solid #ffe8cc;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .contact-item strong {
+            width: 120px;
+            color: var(--accent-color);
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: var(--primary-color);
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            color: var(--text-color);
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #95a5a6;
+            font-size: 0.8rem;
+            padding-bottom: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 0;
+                padding: 20px;
+                border-radius: 0;
+            }
+            h1 {
+                font-size: 1.5rem;
+            }
+            .contact-item {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .contact-item strong {
+                margin-bottom: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>HỖ TRỢ NGƯỜI DÙNG</h1>
+        <p>Ứng dụng: <strong>Giá Vàng Online</strong></p>
+    </header>
+
+    <section>
+        <p>Chào mừng bạn đến với trang hỗ trợ của <strong>Giá Vàng Online</strong>. Chúng tôi luôn sẵn sàng lắng nghe và giải đáp mọi thắc mắc của bạn để mang lại trải nghiệm tốt nhất.</p>
+
+        <h2>Liên hệ hỗ trợ</h2>
+        <p>Nếu bạn gặp bất kỳ vấn đề kỹ thuật nào, có câu hỏi về tính năng, hoặc muốn đóng góp ý kiến phát triển ứng dụng, vui lòng liên hệ với chúng tôi qua thông tin bên dưới:</p>
+        
+        <div class="contact-card">
+            <div class="contact-item">
+                <strong>Email:</strong>
+                <a href="mailto:hiepgoldtran@gmail.com">hiepgoldtran@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>Nhà phát triển:</strong>
+                <span>Trần Hiệp Gold</span>
+            </div>
+            <div class="contact-item">
+                <strong>Thời gian:</strong>
+                <span>Phản hồi trong vòng 24-48 giờ làm việc</span>
+            </div>
+        </div>
+
+        <h2>Câu hỏi thường gặp (FAQ)</h2>
+        
+        <div class="faq-item">
+            <span class="faq-question">1. Ứng dụng cập nhật giá vàng từ đâu?</span>
+            <p>Dữ liệu được cập nhật liên tục từ các nguồn uy tín nhất tại Việt Nam như SJC, Doji, PNJ và các ngân hàng lớn để đảm bảo độ chính xác cao nhất.</p>
+        </div>
+
+        <div class="faq-item">
+            <span class="faq-question">2. Tại sao tôi không thấy biểu đồ hiển thị?</span>
+            <p>Vui lòng kiểm tra kết nối internet của bạn. Nếu vẫn không thấy, hãy thử khởi động lại ứng dụng hoặc liên hệ với chúng tôi qua email để được hỗ trợ kỹ thuật.</p>
+        </div>
+
+        <div class="faq-item">
+            <span class="faq-question">3. Tôi có thể yêu cầu thêm tính năng mới không?</span>
+            <p>Tất nhiên! Chúng tôi rất trân trọng mọi ý kiến đóng góp. Hãy gửi email cho chúng tôi mô tả về tính năng bạn mong muốn.</p>
+        </div>
+
+        <h2>Thông tin pháp lý</h2>
+        <p>Để tìm hiểu về cách chúng tôi bảo vệ thông tin của bạn, vui lòng xem <a href="giavangonline-policy.html">Chính sách quyền riêng tư</a> của chúng tôi.</p>
+    </section>
+</div>
+
+<div class="footer">
+    &copy; 2026 Giá Vàng Online. All rights reserved.
+</div>
+
+</body>
+</html>
