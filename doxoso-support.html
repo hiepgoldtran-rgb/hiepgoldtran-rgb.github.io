@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hỗ trợ khách hàng - Dò Xổ Số Online</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-hover: #1d4ed8;
+            --bg: #f8fafc;
+            --text: #1e293b;
+            --text-light: #64748b;
+            --card-bg: rgba(255, 255, 255, 0.8);
+            --border: #e2e8f0;
+            --glass-border: rgba(255, 255, 255, 0.3);
+            --accent: #3b82f6;
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f172a;
+                --text: #f1f5f9;
+                --text-light: #94a3b8;
+                --card-bg: rgba(30, 41, 59, 0.7);
+                --border: #334155;
+                --glass-border: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .background-blob {
+            position: fixed;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+            filter: blur(100px);
+            opacity: 0.1;
+            z-index: -1;
+            top: -100px;
+            right: -100px;
+        }
+
+        .background-blob-2 {
+            position: fixed;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+            filter: blur(80px);
+            opacity: 0.1;
+            z-index: -1;
+            bottom: -50px;
+            left: -50px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+        .logo-placeholder {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            border-radius: 20px;
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--text), var(--text-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .content-card {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            width: 4px;
+            height: 24px;
+            background: var(--primary);
+            border-radius: 2px;
+        }
+
+        .support-channels {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .channel-card {
+            background: var(--bg);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .channel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .channel-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .channel-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+        }
+
+        .channel-link {
+            color: var(--primary);
+            text-decoration: none;
+            word-break: break-all;
+            font-weight: 500;
+        }
+
+        .faq-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: block;
+            color: var(--text);
+        }
+
+        .faq-answer {
+            color: var(--text-light);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-bottom: 40px;
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @media (max-width: 640px) {
+            .content-card {
+                padding: 25px;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="background-blob"></div>
+    <div class="background-blob-2"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo-placeholder">XS</div>
+            <h1>Trung tâm hỗ trợ</h1>
+            <p class="subtitle">Chúng tôi luôn sẵn sàng lắng nghe và hỗ trợ bạn 24/7</p>
+        </header>
+
+        <div class="content-card">
+            <section>
+                <h2>Liên hệ với chúng tôi</h2>
+                <div class="support-channels">
+                    <div class="channel-card">
+                        <span class="channel-icon">✉️</span>
+                        <span class="channel-title">Email hỗ trợ</span>
+                        <a href="mailto:hiepgoldtran@gmail.com" class="channel-link">hiepgoldtran@gmail.com</a>
+                    </div>
+                    <div class="channel-card">
+                        <span class="channel-icon">💬</span>
+                        <span class="channel-title">Phản hồi ứng dụng</span>
+                        <p style="font-size: 0.9rem; color: var(--text-light);">Gửi phản hồi trực tiếp qua mục "Đánh giá" trong ứng dụng.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Câu hỏi thường gặp (FAQ)</h2>
+                
+                <div class="faq-item">
+                    <span class="faq-question">Làm thế nào để dò vé số nhanh?</span>
+                    <p class="faq-answer">Bạn chỉ cần chọn đài, nhập dãy số trên vé vào mục "Dò số tự động". Ứng dụng sẽ tự động đối soát với kết quả mới nhất và các kỳ trước đó.</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-question">Dữ liệu có được cập nhật chính xác không?</span>
+                    <p class="faq-answer">Dữ liệu được cập nhật trực tiếp từ trang web chính thức của các công ty xổ số kiến thiết nhà nước ngay sau khi có kết quả mở thưởng.</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-question">Tại sao tôi không thấy kết quả đài mình cần?</span>
+                    <p class="faq-answer">Vui lòng kiểm tra lại lịch mở thưởng trong mục "Lịch quay". Nếu đài đang trong giờ mở thưởng, hãy đợi vài phút để dữ liệu được đồng bộ.</p>
+                </div>
+
+                <div class="faq-item">
+                    <span class="faq-question">Ứng dụng có thu phí người dùng không?</span>
+                    <p class="faq-answer">Ứng dụng "Dò Xổ Số Online" hoàn toàn miễn phí. Chúng tôi có cung cấp gói Premium để loại bỏ quảng cáo và mở rộng tính năng thống kê chuyên sâu.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Cam kết của chúng tôi</h2>
+                <p>Chúng tôi cam kết cung cấp thông tin kết quả xổ số nhanh nhất, chính xác nhất và trải nghiệm người dùng mượt mà nhất. Mọi ý kiến đóng góp của bạn là động lực để chúng tôi hoàn thiện ứng dụng mỗi ngày.</p>
+            </section>
+        </div>
+
+        <footer>
+            <p>&copy; 2026 tranhiepgold. Mọi quyền được bảo lưu.</p>
+        </footer>
+    </div>
+</body>
+
+</html>
