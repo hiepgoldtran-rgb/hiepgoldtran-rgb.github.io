@@ -190,7 +190,7 @@
                     },
                     {
                         title: "4. Quyền của người dùng",
-                        content: "Bạn có quyền xóa toàn bộ dữ liệu của mình bất kỳ lúc nào thông qua cài đặt trong ứng dụng. Khi bạn xóa tài khoản hoặc dữ liệu, mọi thông tin trên Cloud cũng sẽ được gỡ bỏ khỏi hệ thống của chúng tôi ngay lập tức."
+                        content: "Bạn có quyền xóa toàn bộ dữ liệu và tài khoản của mình bất kỳ lúc nào thông qua cài đặt trong ứng dụng. Trong trường hợp bạn đã gỡ cài đặt ứng dụng và muốn yêu cầu xóa tài khoản, vui lòng truy cập: https://hiepgoldtran-rgb.github.io/delete-sothuchi.html. Khi bạn xóa tài khoản hoặc dữ liệu, mọi thông tin trên Cloud cũng sẽ được gỡ bỏ khỏi hệ thống của chúng tôi ngay lập tức."
                     },
                     {
                         title: "5. Liên hệ",
@@ -217,7 +217,7 @@
                     },
                     {
                         title: "4. User Rights",
-                        content: "You have the right to delete all your data at any time via in-app settings. When you delete your account or data, all Cloud information will be removed from our system immediately."
+                        content: "You have the right to delete all your data and account at any time via in-app settings. If you have already uninstalled the app and wish to request account deletion, please visit: https://hiepgoldtran-rgb.github.io/delete-sothuchi.html. When you delete your account or data, all Cloud information will be removed from our system immediately."
                     },
                     {
                         title: "5. Contact",
@@ -244,7 +244,7 @@
                     },
                     {
                         title: "4. 用户权利",
-                        content: "您可以随时在设置中清除所有数据。当您删除账户或数据时，云端信息也会立即同步删除。"
+                        content: "您可以随时在应用内设置中删除您的所有数据和账户。如果您已经卸载了应用并希望申请删除账户，请访问：https://hiepgoldtran-rgb.github.io/delete-sothuchi.html。当您删除账户或数据时，云端信息也会立即从我们的系统中移除。"
                     },
                     {
                         title: "5. 联系我们",
@@ -271,7 +271,7 @@
                     },
                     {
                         title: "4. Tus Derechos",
-                        content: "Puedes borrar todos tus datos en cualquier momento desde los ajustes."
+                        content: "Tienes derecho a eliminar todos tus datos y tu cuenta en cualquier momento desde los ajustes de la aplicación. Si ya has desinstalado la aplicación y deseas solicitar la eliminación de la cuenta, visita: https://hiepgoldtran-rgb.github.io/delete-sothuchi.html. Al eliminar tu cuenta o datos, toda la información de la nube se eliminará de nuestro sistema de inmediato."
                     },
                     {
                         title: "5. Contacto",
@@ -294,11 +294,11 @@
                     },
                     {
                         title: "3. Segurança",
-                        content: "Seus dados são armazenados localmente e criptografados ao serem truyền tải para nossos servidores na Nuvem. Não compartilhamos seus dados com terceiros para fins comerciais."
+                        content: "Seus dados são armazenados localmente e criptografados ao serem transmitidos para nossos servidores na Nuvem. Não compartilhamos seus dados com terceiros para fins comerciais."
                     },
                     {
                         title: "4. Seus Direitos",
-                        content: "Você pode apagar seus dados a qualquer momento nas configurações. Ao excluir sua conta ou dados, todas as informações na Nuvem serão removidas imediatamente."
+                        content: "Você tem o direito de excluir todos os seus dados e sua conta a qualquer momento nas configurações do aplicativo. Se você já desinstalou o aplicativo e deseja solicitar a exclusão da conta, visite: https://hiepgoldtran-rgb.github.io/delete-sothuchi.html. Ao excluir sua conta ou dados, todas as informações na nuvem serão removidas do nosso sistema imediatamente."
                     },
                     {
                         title: "5. Contato",
@@ -329,18 +329,20 @@
                 h2.innerText = section.title;
 
                 const p = document.createElement('p');
-                // Check if content contains email and make it a link if so
-                if (section.content.includes('hiepgoldtran@gmail.com')) {
-                    const parts = section.content.split('hiepgoldtran@gmail.com');
-                    p.innerText = parts[0];
-                    const a = document.createElement('a');
-                    a.href = 'mailto:hiepgoldtran@gmail.com';
-                    a.className = 'email';
-                    a.innerText = 'hiepgoldtran@gmail.com';
-                    p.appendChild(a);
-                    if (parts[1]) p.appendChild(document.createTextNode(parts[1]));
+                let content = section.content;
+
+                // Make Email Clickable
+                const email = 'hiepgoldtran@gmail.com';
+                const deleteUrl = 'https://hiepgoldtran-rgb.github.io/delete-sothuchi.html';
+
+                if (content.includes(email) || content.includes(deleteUrl)) {
+                    // Simple replacement logic for this specific page
+                    let html = content.replace(/\n/g, '<br>');
+                    html = html.replace(email, `<a href="mailto:${email}" class="email">${email}</a>`);
+                    html = html.replace(deleteUrl, `<a href="${deleteUrl}" target="_blank" class="email">${deleteUrl}</a>`);
+                    p.innerHTML = html;
                 } else {
-                    p.innerText = section.content;
+                    p.innerText = content;
                 }
 
                 card.appendChild(h2);
