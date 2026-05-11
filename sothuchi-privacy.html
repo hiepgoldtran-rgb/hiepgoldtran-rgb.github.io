@@ -1,354 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="page-title">Privacy Policy - Quản Gia</title>
+    <title>Chính sách Bảo mật - Quản Gia - Sổ Thu Chi</title>
     <style>
+        :root {
+            --primary-color: #007AFF;
+            --text-color: #1C1C1E;
+            --secondary-text: #8E8E93;
+            --background-color: #F2F2F7;
+            --card-background: #FFFFFF;
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
             line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 20px;
-            background-color: #f9f9f9;
+            color: var(--text-color);
+            background-color: var(--background-color);
+            margin: 0;
+            padding: 0;
         }
-        .header-controls {
-            display: flex;
-            justify-content: flex-end;
-            margin-bottom: 20px;
-        }
-        .lang-select {
-            padding: 8px 12px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-            font-size: 14px;
-            background-color: #fff;
-            cursor: pointer;
-            outline: none;
-        }
-        .lang-select:focus {
-            border-color: #007AFF;
-            box-shadow: 0 0 0 2px rgba(0, 122, 255, 0.2);
-        }
+
         .container {
-            background: #fff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
         }
-        h1 { color: #1a1a1a; border-bottom: 2px solid #007AFF; padding-bottom: 10px; }
-        h2 { color: #007AFF; margin-top: 30px; }
-        p, li { color: #444; }
-        .last-updated { font-style: italic; color: #888; margin-bottom: 30px; }
-        footer { margin-top: 50px; text-align: center; border-top: 1px solid #eee; padding-top: 20px; color: #888; font-size: 0.9em; }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .last-updated {
+            color: var(--secondary-text);
+            font-size: 15px;
+        }
+
+        /* Language Switcher */
+        .lang-switcher {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .lang-btn {
+            padding: 8px 16px;
+            border-radius: 12px;
+            border: none;
+            background: var(--card-background);
+            color: var(--text-color);
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--primary-color);
+            color: #FFFFFF;
+        }
+
+        .lang-content {
+            display: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .card {
+            background: var(--card-background);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 17px;
+            white-space: pre-line;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-bottom: 16px;
+        }
+
+        li {
+            margin-bottom: 8px;
+            font-size: 17px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: var(--secondary-text);
+            font-size: 14px;
+            font-style: italic;
+        }
+
+        .email {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .card {
+                padding: 20px;
+            }
+
+            .header h1 {
+                font-size: 28px;
+            }
+        }
     </style>
 </head>
+
 <body>
-    <div class="header-controls">
-        <select id="language-selector" class="lang-select" onchange="changeLanguage(this.value)">
-            <option value="en">English (Tiếng Anh)</option>
-            <option value="vi">Tiếng Việt</option>
-            <option value="zh">中文 (Tiếng Trung)</option>
-            <option value="es">Español (Tây Ban Nha)</option>
-            <option value="pt">Português (Bồ Đào Nha)</option>
-            <option value="hi">हिन्दी (Tiếng Ấn)</option>
-        </select>
-    </div>
-
     <div class="container">
-        <h1 data-i18n="h1"></h1>
-        <p class="last-updated" data-i18n="last_updated"></p>
+        <div class="header">
+            <h1 id="main-title">CHÍNH SÁCH BẢO MẬT</h1>
+            <p class="last-updated" id="last-updated-text">Cập nhật lần cuối: 11/05/2026</p>
+        </div>
 
-        <p data-i18n="intro"></p>
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+            <button class="lang-btn active" onclick="setLang('vi')">Tiếng Việt</button>
+            <button class="lang-btn" onclick="setLang('en')">English</button>
+            <button class="lang-btn" onclick="setLang('zh')">中文</button>
+            <button class="lang-btn" onclick="setLang('es')">Español</button>
+            <button class="lang-btn" onclick="setLang('pt')">Português</button>
+        </div>
 
-        <h2 data-i18n="h2_1"></h2>
-        <ul>
-            <li data-i18n="li_1_1"></li>
-            <li data-i18n="li_1_2"></li>
-            <li data-i18n="li_1_3"></li>
-            <li data-i18n="li_1_4"></li>
-        </ul>
+        <div id="content-area">
+            <!-- Content will be injected here by JS -->
+        </div>
 
-        <h2 data-i18n="h2_2"></h2>
-        <p data-i18n="p_2"></p>
-        <ul>
-            <li data-i18n="li_2_1"></li>
-            <li data-i18n="li_2_2"></li>
-            <li data-i18n="li_2_3"></li>
-            <li data-i18n="li_2_4"></li>
-        </ul>
-
-        <h2 data-i18n="h2_3"></h2>
-        <p data-i18n="p_3"></p>
-        <ul>
-            <li data-i18n="li_3_1"></li>
-            <li data-i18n="li_3_2"></li>
-            <li data-i18n="li_3_3"></li>
-        </ul>
-
-        <h2 data-i18n="h2_4"></h2>
-        <p data-i18n="p_4"></p>
-
-        <h2 data-i18n="h2_5"></h2>
-        <p data-i18n="p_5"></p>
-        <ul>
-            <li data-i18n="li_5_1"></li>
-            <li data-i18n="li_5_2"></li>
-        </ul>
-
-        <h2 data-i18n="h2_6"></h2>
-        <p data-i18n="p_6"></p>
-
-        <h2 data-i18n="h2_7"></h2>
-        <p data-i18n="p_7"></p>
-
-        <h2 data-i18n="h2_8"></h2>
-        <p data-i18n="p_8"></p>
-
-        <footer>
-            <p data-i18n="footer"></p>
-        </footer>
+        <div class="footer">
+            <p id="footer-text">Cảm ơn bạn đã tin tưởng Quản Gia</p>
+        </div>
     </div>
 
     <script>
-        // Từ điển đa ngôn ngữ
         const translations = {
-            en: {
-                title: "Privacy Policy - Quản Gia",
-                h1: "Privacy Policy",
-                last_updated: "Last updated: March 17, 2026",
-                intro: "Welcome to <strong>Quản Gia (Expense Tracker)</strong>. We respect your privacy and are committed to protecting your personal data. This policy describes how we collect, use, and safeguard your information when you use our application.",
-                h2_1: "1. Information We Collect",
-                li_1_1: "<strong>Account Information:</strong> When you sign in with Google or Apple, we collect your user ID, email address, and display name to set up your account and sync data.",
-                li_1_2: "<strong>Financial Data:</strong> Income and expense transactions, budgets, and savings goals entered by you into the app.",
-                li_1_3: "<strong>Device Data:</strong> Basic information about your device type and operating system to optimize the app experience.",
-                li_1_4: "<strong>Images:</strong> If granted permission, we access your photo library only when you wish to attach receipts to transactions.",
-                h2_2: "2. How We Use Information",
-                p_2: "We use the collected information to:",
-                li_2_1: "Provide and maintain the core features of the application.",
-                li_2_2: "Synchronize data across multiple devices via Cloud Sync.",
-                li_2_3: "Improve app performance and fix technical bugs.",
-                li_2_4: "Display relevant advertisements (for users of the free version).",
-                h2_3: "3. Third-Party Services",
-                p_3: "Our application uses third-party services to operate effectively:",
-                li_3_1: "<strong>Google Firebase:</strong> Used for user authentication and storing synced data.",
-                li_3_2: "<strong>Google AdMob:</strong> Used to display advertisements. AdMob may collect anonymous identifier data for ad targeting.",
-                li_3_3: "<strong>Google/Apple Sign-In:</strong> Used for secure user identification.",
-                h2_4: "4. Data Security",
-                p_4: "Your data is encrypted during transit and at rest on Firebase's secure servers. We never share or sell your personal financial data to any third party for commercial purposes.",
-                h2_5: "5. Your Rights",
-                p_5: "You have full control over your data:",
-                li_5_1: "<strong>Access and Edit:</strong> You can view and modify your data directly within the app.",
-                li_5_2: "<strong>Delete Data:</strong> You can use the \"Delete all data\" function in Settings or request us to permanently delete your account from the Cloud system.",
-                h2_6: "6. Children's Privacy",
-                p_6: "The app is not directed to children under 13. We do not knowingly collect information from children without parental consent.",
-                h2_7: "7. Policy Changes",
-                p_7: "We may update this policy from time to time. Changes will be effective immediately upon posting in the app or on this website.",
-                h2_8: "8. Contact Us",
-                p_8: "If you have any questions about this policy, please contact us via email: <a href='mailto:hiepgoldtran@gmail.com'>hiepgoldtran@gmail.com</a>",
-                footer: "&copy; 2026 Quản Gia. All rights reserved."
-            },
             vi: {
-                title: "Chính sách Quyền riêng tư - Quản Gia",
-                h1: "Chính sách Quyền riêng tư",
-                last_updated: "Cập nhật lần cuối: Ngày 17 tháng 03 năm 2026",
-                intro: "Chào mừng bạn đến với <strong>Quản Gia - Sổ Thu Chi</strong>. Chúng tôi tôn trọng quyền riêng tư của bạn và cam kết bảo vệ dữ liệu cá nhân của bạn. Chính sách này mô tả cách chúng tôi thu thập, sử dụng và bảo mật thông tin khi bạn sử dụng ứng dụng.",
-                h2_1: "1. Thông tin chúng tôi thu thập",
-                li_1_1: "<strong>Thông tin tài khoản:</strong> Khi bạn đăng nhập bằng Google hoặc Apple, chúng tôi thu thập ID người dùng, địa chỉ email và tên hiển thị để thiết lập tài khoản và đồng bộ dữ liệu.",
-                li_1_2: "<strong>Dữ liệu tài chính:</strong> Các giao dịch thu chi, ngân sách và mục tiêu tiết kiệm do bạn nhập vào ứng dụng.",
-                li_1_3: "<strong>Dữ liệu thiết bị:</strong> Thông tin cơ bản về loại thiết bị và hệ điều hành để tối ưu hóa trải nghiệm ứng dụng.",
-                li_1_4: "<strong>Hình ảnh:</strong> Nếu bạn cấp quyền, chúng tôi truy cập thư viện ảnh chỉ khi bạn muốn đính kèm biên lai vào giao dịch.",
-                h2_2: "2. Cách chúng tôi sử dụng thông tin",
-                p_2: "Chúng tôi sử dụng thông tin thu thập được để:",
-                li_2_1: "Cung cấp và duy trì các tính năng cốt lõi của ứng dụng.",
-                li_2_2: "Đồng bộ hóa dữ liệu trên nhiều thiết bị thông qua hệ thống đám mây (Cloud Sync).",
-                li_2_3: "Cải thiện hiệu suất ứng dụng và sửa lỗi kỹ thuật.",
-                li_2_4: "Hiển thị quảng cáo phù hợp (đối với người dùng phiên bản miễn phí).",
-                h2_3: "3. Dịch vụ của bên thứ ba",
-                p_3: "Ứng dụng của chúng tôi sử dụng các dịch vụ bên thứ ba để hoạt động hiệu quả:",
-                li_3_1: "<strong>Google Firebase:</strong> Sử dụng để xác thực người dùng và lưu trữ dữ liệu đồng bộ.",
-                li_3_2: "<strong>Google AdMob:</strong> Sử dụng để hiển thị quảng cáo. AdMob có thể thu thập dữ liệu định danh ẩn danh để phục vụ mục tiêu quảng cáo.",
-                li_3_3: "<strong>Google/Apple Sign-In:</strong> Sử dụng để định danh người dùng an toàn.",
-                h2_4: "4. Bảo mật dữ liệu",
-                p_4: "Dữ liệu của bạn được mã hóa trong quá trình truyền tải và lưu trữ trên các máy chủ bảo mật của Firebase. Chúng tôi không bao giờ chia sẻ hoặc bán dữ liệu tài chính cá nhân của bạn cho bất kỳ bên thứ ba nào vì mục đích thương mại.",
-                h2_5: "5. Quyền của bạn",
-                p_5: "Bạn có toàn quyền đối với dữ liệu của mình:",
-                li_5_1: "<strong>Truy cập và Chỉnh sửa:</strong> Bạn có thể xem và sửa đổi dữ liệu trực tiếp trong ứng dụng.",
-                li_5_2: "<strong>Xóa dữ liệu:</strong> Bạn có thể sử dụng chức năng \"Xóa toàn bộ dữ liệu\" trong mục Cài đặt hoặc yêu cầu chúng tôi xóa tài khoản vĩnh viễn trên hệ thống Cloud.",
-                h2_6: "6. Quyền riêng tư của trẻ em",
-                p_6: "Ứng dụng không hướng đến trẻ em dưới 13 tuổi. Chúng tôi không chủ động thu thập thông tin từ trẻ em mà không có sự đồng ý của phụ huynh.",
-                h2_7: "7. Thay đổi chính sách",
-                p_7: "Chúng tôi có thể cập nhật chính sách này theo thời gian. Các thay đổi sẽ có hiệu lực ngay khi được đăng tải trong ứng dụng hoặc trang web này.",
-                h2_8: "8. Liên hệ",
-                p_8: "Nếu bạn có bất kỳ câu hỏi nào về chính sách này, vui lòng liên hệ qua email: <a href='mailto:hiepgoldtran@gmail.com'>hiepgoldtran@gmail.com</a>",
-                footer: "&copy; 2026 Quản Gia - Sổ Thu Chi. Bảo lưu mọi quyền."
+                title: "CHÍNH SÁCH BẢO MẬT",
+                last_updated: "Cập nhật lần cuối: 11/05/2026",
+                footer: "Cảm ơn bạn đã tin tưởng Quản Gia",
+                sections: [
+                    {
+                        title: "1. Thu thập thông tin",
+                        content: "Quản Gia cam kết bảo vệ quyền riêng tư của bạn. Ứng dụng thu thập dữ liệu về giao dịch tài chính do bạn nhập vào để cung cấp chức năng quản lý chi tiêu.\n\nNếu bạn sử dụng tính năng đồng bộ, thông tin tài khoản (Email, Tên) từ Google hoặc Apple sẽ được sử dụng để định danh trên hệ thống của chúng tôi."
+                    },
+                    {
+                        title: "2. Sử dụng thông tin",
+                        content: "Thông tin của bạn được sử dụng để:\n• Hiển thị báo cáo và phân tích chi tiêu cá nhân.\n• Đồng bộ dữ liệu giữa các thiết bị thông qua tài khoản của bạn.\n• Cải thiện trải nghiệm người dùng và tính năng ứng dụng."
+                    },
+                    {
+                        title: "3. Bảo mật dữ liệu",
+                        content: "Dữ liệu của bạn được lưu trữ cục bộ trên thiết bị và được mã hóa khi truyền tải lên máy chủ đám mây (Cloud). Chúng tôi không chia sẻ thông tin tài chính cá nhân của bạn với bất kỳ bên thứ ba nào vì mục đích thương mại."
+                    },
+                    {
+                        title: "4. Quyền của người dùng",
+                        content: "Bạn có quyền xóa toàn bộ dữ liệu của mình bất kỳ lúc nào thông qua cài đặt trong ứng dụng. Khi bạn xóa tài khoản hoặc dữ liệu, mọi thông tin trên Cloud cũng sẽ được gỡ bỏ khỏi hệ thống của chúng tôi ngay lập tức."
+                    },
+                    {
+                        title: "5. Liên hệ",
+                        content: "Nếu có bất kỳ câu hỏi nào về chính sách này, vui lòng liên hệ với chúng tôi qua email:\nhiepgoldtran@gmail.com"
+                    }
+                ]
+            },
+            en: {
+                title: "PRIVACY POLICY",
+                last_updated: "Last updated: May 11, 2026",
+                footer: "Thank you for trusting Quản Gia",
+                sections: [
+                    {
+                        title: "1. Data Collection",
+                        content: "Quản Gia is committed to protecting your privacy. The app collects financial transaction data you enter to provide expense management features.\n\nIf you use the sync feature, account information (Email, Name) from Google or Apple will be used for identification on our system."
+                    },
+                    {
+                        title: "2. Data Usage",
+                        content: "Your information is used to:\n• Display personal spending reports and analysis.\n• Sync data across devices via your account.\n• Improve user experience and app features."
+                    },
+                    {
+                        title: "3. Data Security",
+                        content: "Your data is stored locally on your device and encrypted when transmitted to our Cloud servers. We do not share your personal financial information with any third parties for commercial purposes."
+                    },
+                    {
+                        title: "4. User Rights",
+                        content: "You have the right to delete all your data at any time via in-app settings. When you delete your account or data, all Cloud information will be removed from our system immediately."
+                    },
+                    {
+                        title: "5. Contact",
+                        content: "If you have any questions about this policy, please contact us via email:\nhiepgoldtran@gmail.com"
+                    }
+                ]
             },
             zh: {
-                title: "隐私政策 - Quản Gia",
-                h1: "隐私政策",
-                last_updated: "最后更新：2026年3月17日",
-                intro: "欢迎使用 <strong>Quản Gia (记账本)</strong>。我们尊重您的隐私，并致力于保护您的个人数据。本政策描述了您在使用应用程序时我们如何收集、使用和保护您的信息。",
-                h2_1: "1. 我们收集的信息",
-                li_1_1: "<strong>账户信息：</strong> 当您使用 Google 或 Apple 登录时，我们会收集您的用户 ID、电子邮件地址和显示名称，以设置账户并同步数据。",
-                li_1_2: "<strong>财务数据：</strong> 您输入到应用中的收支交易、预算和储蓄目标。",
-                li_1_3: "<strong>设备数据：</strong> 有关您的设备类型和操作系统的基本信息，以优化应用体验。",
-                li_1_4: "<strong>图片：</strong> 如果获得许可，我们仅在您希望将收据附加到交易时访问您的照片库。",
-                h2_2: "2. 我们如何使用信息",
-                p_2: "我们使用收集到的信息来：",
-                li_2_1: "提供并维护应用程序的核心功能。",
-                li_2_2: "通过云同步 (Cloud Sync) 在多台设备上同步数据。",
-                li_2_3: "提高应用程序性能并修复技术错误。",
-                li_2_4: "显示相关广告（针对免费版用户）。",
-                h2_3: "3. 第三方服务",
-                p_3: "我们的应用程序使用第三方服务来有效运行：",
-                li_3_1: "<strong>Google Firebase：</strong> 用于用户身份验证和存储同步数据。",
-                li_3_2: "<strong>Google AdMob：</strong> 用于显示广告。AdMob 可能会收集匿名标识符数据用于广告定位。",
-                li_3_3: "<strong>Google/Apple 登录：</strong> 用于安全的用户身份识别。",
-                h2_4: "4. 数据安全",
-                p_4: "您的数据在传输过程中和在 Firebase 的安全服务器上存储时都经过加密。我们绝不会为了商业目的与任何第三方共享或出售您的个人财务数据。",
-                h2_5: "5. 您的权利",
-                p_5: "您对自己的数据拥有完全的控制权：",
-                li_5_1: "<strong>访问和编辑：</strong> 您可以直接在应用程序中查看和修改您的数据。",
-                li_5_2: "<strong>删除数据：</strong> 您可以使用“设置”中的“删除所有数据”功能，或要求我们从云系统中永久删除您的账户。",
-                h2_6: "6. 儿童隐私",
-                p_6: "该应用程序不针对 13 岁以下的儿童。未经父母同意，我们不会故意收集儿童的信息。",
-                h2_7: "7. 政策变更",
-                p_7: "我们可能会不时更新本政策。更改将在应用程序或本网站上发布后立即生效。",
-                h2_8: "8. 联系我们",
-                p_8: "如果您对本政策有任何疑问，请通过电子邮件联系我们：<a href='mailto:hiepgoldtran@gmail.com'>hiepgoldtran@gmail.com</a>",
-                footer: "&copy; 2026 Quản Gia. 保留所有权利。"
+                title: "隐私政策",
+                last_updated: "最近更新: 2026年5月11日",
+                footer: "感谢您信任管家",
+                sections: [
+                    {
+                        title: "1. 信息收集",
+                        content: "管家致力于保护您的隐私。应用收集您输入的交易数据以提供记账功能。\n\n如果您使用同步功能，我们会使用 Google 或 Apple 的账户信息 (邮箱、姓名) 作为您的系统标识。"
+                    },
+                    {
+                        title: "2. 信息使用",
+                        content: "您的信息用于：\n• 显示个人支出报表和分析。\n• 在设备间同步数据。\n• 改进用户体验和功能。"
+                    },
+                    {
+                        title: "3. 数据安全",
+                        content: "数据本地存储并加密传输至云端。我们不会出于商业目的与第三方分享您的个人财务信息。"
+                    },
+                    {
+                        title: "4. 用户权利",
+                        content: "您可以随时在设置中清除所有数据。当您删除账户或数据时，云端信息也会立即同步删除。"
+                    },
+                    {
+                        title: "5. 联系我们",
+                        content: "如有任何疑问，请通过邮箱联系我们：\nhiepgoldtran@gmail.com"
+                    }
+                ]
             },
             es: {
-                title: "Política de Privacidad - Quản Gia",
-                h1: "Política de Privacidad",
-                last_updated: "Última actualización: 17 de marzo de 2026",
-                intro: "Bienvenido a <strong>Quản Gia (Rastreador de Gastos)</strong>. Respetamos su privacidad y estamos comprometidos a proteger sus datos personales. Esta política describe cómo recopilamos, usamos y protegemos su información cuando utiliza nuestra aplicación.",
-                h2_1: "1. Información que recopilamos",
-                li_1_1: "<strong>Información de la cuenta:</strong> Al iniciar sesión con Google o Apple, recopilamos su ID de usuario, correo electrónico y nombre para configurar su cuenta y sincronizar datos.",
-                li_1_2: "<strong>Datos financieros:</strong> Transacciones de ingresos y gastos, presupuestos y metas de ahorro que ingrese en la aplicación.",
-                li_1_3: "<strong>Datos del dispositivo:</strong> Información básica sobre su tipo de dispositivo y sistema operativo para optimizar la experiencia.",
-                li_1_4: "<strong>Imágenes:</strong> Si nos da permiso, accedemos a su galería solo cuando desee adjuntar recibos a las transacciones.",
-                h2_2: "2. Cómo usamos la información",
-                p_2: "Utilizamos la información recopilada para:",
-                li_2_1: "Proporcionar y mantener las funciones principales de la aplicación.",
-                li_2_2: "Sincronizar datos en múltiples dispositivos a través de Cloud Sync.",
-                li_2_3: "Mejorar el rendimiento y corregir errores técnicos.",
-                li_2_4: "Mostrar anuncios relevantes (para usuarios de la versión gratuita).",
-                h2_3: "3. Servicios de terceros",
-                p_3: "Nuestra aplicación utiliza servicios de terceros para funcionar eficazmente:",
-                li_3_1: "<strong>Google Firebase:</strong> Utilizado para la autenticación de usuarios y almacenamiento de datos.",
-                li_3_2: "<strong>Google AdMob:</strong> Utilizado para mostrar anuncios. AdMob puede recopilar datos anónimos para orientar anuncios.",
-                li_3_3: "<strong>Google/Apple Sign-In:</strong> Utilizado para una identificación segura del usuario.",
-                h2_4: "4. Seguridad de los datos",
-                p_4: "Sus datos están encriptados durante la transmisión y en los servidores de Firebase. Nunca compartimos ni vendemos sus datos financieros personales a terceros con fines comerciales.",
-                h2_5: "5. Sus derechos",
-                p_5: "Usted tiene control total sobre sus datos:",
-                li_5_1: "<strong>Acceso y Edición:</strong> Puede ver y modificar sus datos directamente en la aplicación.",
-                li_5_2: "<strong>Eliminar datos:</strong> Puede usar la función \"Eliminar todos los datos\" en Configuración o solicitarnos que eliminemos su cuenta de forma permanente.",
-                h2_6: "6. Privacidad infantil",
-                p_6: "La aplicación no está dirigida a niños menores de 13 años. No recopilamos intencionalmente información de niños sin el consentimiento de los padres.",
-                h2_7: "7. Cambios en la política",
-                p_7: "Podemos actualizar esta política ocasionalmente. Los cambios entrarán en vigencia inmediatamente después de su publicación.",
-                h2_8: "8. Contáctenos",
-                p_8: "Si tiene alguna pregunta sobre esta política, contáctenos por correo electrónico: <a href='mailto:hiepgoldtran@gmail.com'>hiepgoldtran@gmail.com</a>",
-                footer: "&copy; 2026 Quản Gia. Todos los derechos reservados."
+                title: "POLÍTICA DE PRIVACIDAD",
+                last_updated: "Última actualización: 11 de mayo de 2026",
+                footer: "Gracias por confiar en Quản Gia",
+                sections: [
+                    {
+                        title: "1. Recolección de Datos",
+                        content: "Nos comprometemos a proteger tu privacidad. Recopilamos los datos financieros que ingresas para gestionar tus gastos."
+                    },
+                    {
+                        title: "2. Uso de la Información",
+                        content: "Tus datos se usan para reportes, sincronización y mejorar la app."
+                    },
+                    {
+                        title: "3. Seguridad",
+                        content: "Los datos están cifrados y seguros en nuestros servidores."
+                    },
+                    {
+                        title: "4. Tus Derechos",
+                        content: "Puedes borrar todos tus datos en cualquier momento desde los ajustes."
+                    },
+                    {
+                        title: "5. Contacto",
+                        content: "Si tienes dudas, escríbenos a:\nhiepgoldtran@gmail.com"
+                    }
+                ]
             },
             pt: {
-                title: "Política de Privacidade - Quản Gia",
-                h1: "Política de Privacidade",
-                last_updated: "Última atualização: 17 de março de 2026",
-                intro: "Bem-vindo ao <strong>Quản Gia (Rastreador de Despesas)</strong>. Respeitamos a sua privacidade e estamos empenhados em proteger os seus dados pessoais. Esta política descreve como recolhemos, usamos e protegemos as suas informações.",
-                h2_1: "1. Informações que recolhemos",
-                li_1_1: "<strong>Informações da conta:</strong> Ao fazer login com o Google ou Apple, recolhemos o seu ID de utilizador, e-mail e nome para configurar a sua conta e sincronizar dados.",
-                li_1_2: "<strong>Dados financeiros:</strong> Transações de receitas e despesas, orçamentos e metas de poupança inseridos por si na aplicação.",
-                li_1_3: "<strong>Dados do dispositivo:</strong> Informações básicas sobre o tipo de dispositivo e sistema operativo para otimizar a experiência.",
-                li_1_4: "<strong>Imagens:</strong> Se concedida permissão, acedemos à sua galeria apenas quando desejar anexar recibos às transações.",
-                h2_2: "2. Como usamos as informações",
-                p_2: "Usamos as informações recolhidas para:",
-                li_2_1: "Fornecer e manter as principais funcionalidades da aplicação.",
-                li_2_2: "Sincronizar dados em vários dispositivos através do Cloud Sync.",
-                li_2_3: "Melhorar o desempenho da aplicação e corrigir erros técnicos.",
-                li_2_4: "Apresentar anúncios relevantes (para utilizadores da versão gratuita).",
-                h2_3: "3. Serviços de terceiros",
-                p_3: "A nossa aplicação utiliza serviços de terceiros para funcionar eficazmente:",
-                li_3_1: "<strong>Google Firebase:</strong> Utilizado para autenticação de utilizadores e armazenamento de dados.",
-                li_3_2: "<strong>Google AdMob:</strong> Utilizado para apresentar anúncios. A AdMob pode recolher dados anónimos para segmentação de anúncios.",
-                li_3_3: "<strong>Google/Apple Sign-In:</strong> Utilizado para identificação segura do utilizador.",
-                h2_4: "4. Segurança de dados",
-                p_4: "Os seus dados são encriptados durante a transmissão e nos servidores seguros do Firebase. Nunca partilhamos ou vendemos os seus dados financeiros a terceiros para fins comerciais.",
-                h2_5: "5. Os seus direitos",
-                p_5: "Você tem controlo total sobre os seus dados:",
-                li_5_1: "<strong>Aceder e Editar:</strong> Pode visualizar e modificar os seus dados diretamente na aplicação.",
-                li_5_2: "<strong>Eliminar dados:</strong> Pode utilizar a função \"Eliminar todos os dados\" nas Definições ou solicitar a eliminação permanente da sua conta.",
-                h2_6: "6. Privacidade de crianças",
-                p_6: "A aplicação não é direcionada a crianças menores de 13 anos. Não recolhemos intencionalmente informações de crianças sem o consentimento dos pais.",
-                h2_7: "7. Alterações à política",
-                p_7: "Podemos atualizar esta política periodicamente. As alterações entram em vigor imediatamente após a publicação.",
-                h2_8: "8. Contacte-nos",
-                p_8: "Se tiver alguma dúvida sobre esta política, contacte-nos por e-mail: <a href='mailto:hiepgoldtran@gmail.com'>hiepgoldtran@gmail.com</a>",
-                footer: "&copy; 2026 Quản Gia. Todos os direitos reservados."
-            },
-            hi: {
-                title: "गोपनीयता नीति - Quản Gia",
-                h1: "गोपनीयता नीति",
-                last_updated: "अंतिम अपडेट: 17 मार्च, 2026",
-                intro: "<strong>Quản Gia (व्यय ट्रैकर)</strong> में आपका स्वागत है। हम आपकी गोपनीयता का सम्मान करते हैं और आपके व्यक्तिगत डेटा की सुरक्षा के लिए प्रतिबद्ध हैं। यह नीति बताती है कि जब आप ऐप का उपयोग करते हैं तो हम आपकी जानकारी कैसे एकत्र, उपयोग और सुरक्षित करते हैं।",
-                h2_1: "1. जानकारी जो हम एकत्र करते हैं",
-                li_1_1: "<strong>खाता जानकारी:</strong> जब आप Google या Apple से साइन इन करते हैं, तो हम आपका खाता सेट करने और डेटा सिंक करने के लिए आपका उपयोगकर्ता आईडी, ईमेल और नाम एकत्र करते हैं।",
-                li_1_2: "<strong>वित्तीय डेटा:</strong> आय और व्यय लेनदेन, बजट और बचत लक्ष्य जो आप ऐप में दर्ज करते हैं।",
-                li_1_3: "<strong>डिवाइस डेटा:</strong> ऐप अनुभव को अनुकूलित करने के लिए आपके डिवाइस प्रकार और ऑपरेटिंग सिस्टम के बारे में बुनियादी जानकारी।",
-                li_1_4: "<strong>चित्र:</strong> अनुमति मिलने पर, हम आपकी फोटो लाइब्रेरी तक तभी पहुंचते हैं जब आप लेनदेन में रसीद संलग्न करना चाहते हैं।",
-                h2_2: "2. हम जानकारी का उपयोग कैसे करते हैं",
-                p_2: "हम एकत्रित जानकारी का उपयोग इसके लिए करते हैं:",
-                li_2_1: "एप्लिकेशन की मुख्य विशेषताएं प्रदान करना और बनाए रखना।",
-                li_2_2: "क्लाउड सिंक के माध्यम से कई उपकरणों में डेटा सिंक करना।",
-                li_2_3: "ऐप प्रदर्शन में सुधार और तकनीकी बग्स को ठीक करना।",
-                li_2_4: "प्रासंगिक विज्ञापन प्रदर्शित करना (मुफ्त संस्करण के उपयोगकर्ताओं के लिए)।",
-                h2_3: "3. तृतीय-पक्ष सेवाएं",
-                p_3: "हमारा ऐप प्रभावी ढंग से काम करने के लिए तृतीय-पक्ष सेवाओं का उपयोग करता है:",
-                li_3_1: "<strong>Google Firebase:</strong> उपयोगकर्ता प्रमाणीकरण और डेटा संग्रहीत करने के लिए उपयोग किया जाता है।",
-                li_3_2: "<strong>Google AdMob:</strong> विज्ञापन प्रदर्शित करने के लिए। AdMob विज्ञापन लक्ष्यीकरण के लिए अनाम डेटा एकत्र कर सकता है।",
-                li_3_3: "<strong>Google/Apple Sign-In:</strong> सुरक्षित उपयोगकर्ता पहचान के लिए।",
-                h2_4: "4. डेटा सुरक्षा",
-                p_4: "आपका डेटा ट्रांसमिशन के दौरान और फायरबेस के सर्वर पर एन्क्रिप्ट किया जाता है। हम व्यावसायिक उद्देश्यों के लिए कभी भी आपके व्यक्तिगत वित्तीय डेटा को किसी तीसरे पक्ष के साथ साझा या बेचते नहीं हैं।",
-                h2_5: "5. आपके अधिकार",
-                p_5: "अपने डेटा पर आपका पूर्ण नियंत्रण है:",
-                li_5_1: "<strong>एक्सेस और संपादित करें:</strong> आप सीधे ऐप के भीतर अपना डेटा देख और संशोधित कर सकते हैं।",
-                li_5_2: "<strong>डेटा हटाएं:</strong> आप सेटिंग्स में \"सभी डेटा हटाएं\" फ़ंक्शन का उपयोग कर सकते हैं या हमें क्लाउड से अपना खाता स्थायी रूप से हटाने का अनुरोध कर सकते हैं।",
-                h2_6: "6. बच्चों की गोपनीयता",
-                p_6: "ऐप 13 वर्ष से कम उम्र के बच्चों के लिए निर्देशित नहीं है। हम माता-पिता की सहमति के बिना जानबूझकर बच्चों से जानकारी एकत्र नहीं करते हैं।",
-                h2_7: "7. नीति परिवर्तन",
-                p_7: "हम समय-समय पर इस नीति को अपडेट कर सकते हैं। परिवर्तन इस वेबसाइट पर पोस्ट होने के तुरंत बाद प्रभावी होंगे।",
-                h2_8: "8. हमसे संपर्क करें",
-                p_8: "यदि इस नीति के बारे में आपके कोई प्रश्न हैं, तो कृपया ईमेल के माध्यम से हमसे संपर्क करें: <a href='mailto:hiepgoldtran@gmail.com'>hiepgoldtran@gmail.com</a>",
-                footer: "&copy; 2026 Quản Gia. सर्वाधिकार सुरक्षित।"
+                title: "POLÍTICA DE PRIVACIDADE",
+                last_updated: "Última atualização: 11 de maio de 2026",
+                footer: "Obrigado por confiar no Quản Gia",
+                sections: [
+                    {
+                        title: "1. Coleta de Dados",
+                        content: "O Quản Gia está comprometido com sua privacidade. Coletamos dados de transações financeiras inseridos por você para fornecer recursos de gestão de gastos.\n\nSe você usar a sincronização, informações da conta (Email, Nome) do Google ou Apple serão usadas para identificação no sistema."
+                    },
+                    {
+                        title: "2. Uso de Dados",
+                        content: "Suas informações são usadas para:\n• Exibir relatórios e análises financeiras.\n• Sincronizar dados entre dispositivos.\n• Melhorar a experiência e os recursos do app."
+                    },
+                    {
+                        title: "3. Segurança",
+                        content: "Seus dados são armazenados localmente e criptografados ao serem truyền tải para nossos servidores na Nuvem. Não compartilhamos seus dados com terceiros para fins comerciais."
+                    },
+                    {
+                        title: "4. Seus Direitos",
+                        content: "Você pode apagar seus dados a qualquer momento nas configurações. Ao excluir sua conta ou dados, todas as informações na Nuvem serão removidas imediatamente."
+                    },
+                    {
+                        title: "5. Contato",
+                        content: "Dúvidas sobre esta política? Contate-nos por e-mail:\nhiepgoldtran@gmail.com"
+                    }
+                ]
             }
         };
 
-        // Hàm thay đổi ngôn ngữ
-        function changeLanguage(lang) {
-            const t = translations[lang];
-            
-            // Cập nhật thẻ title của trình duyệt
-            document.getElementById('page-title').innerText = t.title;
-            document.documentElement.lang = lang; // Cập nhật thuộc tính lang của HTML
+        function setLang(lang) {
+            const data = translations[lang];
 
-            // Lặp qua tất cả các thẻ có thuộc tính data-i18n và cập nhật nội dung
-            const elements = document.querySelectorAll('[data-i18n]');
-            elements.forEach(el => {
-                const key = el.getAttribute('data-i18n');
-                if (t[key]) {
-                    el.innerHTML = t[key];
+            // Update Headers
+            document.getElementById('main-title').innerText = data.title;
+            document.getElementById('last-updated-text').innerText = data.last_updated;
+            document.getElementById('footer-text').innerText = data.footer;
+            document.documentElement.lang = lang;
+
+            // Update Content Area
+            const contentArea = document.getElementById('content-area');
+            contentArea.innerHTML = '';
+
+            data.sections.forEach(section => {
+                const card = document.createElement('div');
+                card.className = 'card';
+
+                const h2 = document.createElement('h2');
+                h2.innerText = section.title;
+
+                const p = document.createElement('p');
+                // Check if content contains email and make it a link if so
+                if (section.content.includes('hiepgoldtran@gmail.com')) {
+                    const parts = section.content.split('hiepgoldtran@gmail.com');
+                    p.innerText = parts[0];
+                    const a = document.createElement('a');
+                    a.href = 'mailto:hiepgoldtran@gmail.com';
+                    a.className = 'email';
+                    a.innerText = 'hiepgoldtran@gmail.com';
+                    p.appendChild(a);
+                    if (parts[1]) p.appendChild(document.createTextNode(parts[1]));
+                } else {
+                    p.innerText = section.content;
+                }
+
+                card.appendChild(h2);
+                card.appendChild(p);
+                contentArea.appendChild(card);
+            });
+
+            // Update Button Styles
+            const buttons = document.querySelectorAll('.lang-btn');
+            buttons.forEach(btn => {
+                if (btn.innerText.toLowerCase().includes(lang) ||
+                    (lang === 'vi' && btn.innerText === 'Tiếng Việt') ||
+                    (lang === 'zh' && btn.innerText === '中文') ||
+                    (lang === 'es' && btn.innerText === 'Español') ||
+                    (lang === 'pt' && btn.innerText === 'Português') ||
+                    (lang === 'en' && btn.innerText === 'English')) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
                 }
             });
         }
 
-        // Chạy hàm này khi trang vừa load xong để thiết lập Tiếng Anh làm mặc định
-        document.addEventListener('DOMContentLoaded', () => {
-            changeLanguage('en');
-        });
+        // Initialize with default language
+        setLang('vi');
     </script>
 </body>
+
 </html>
