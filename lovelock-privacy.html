@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Love Lock</title>
+    <style>
+        :root {
+            --primary: #FF2D55;
+            --text: #1C1C1E;
+            --secondary: #8E8E93;
+            --bg: #FAFAFA;
+            --card: #FFFFFF;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        .lang-selector {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #E5E5EA;
+            background: var(--card);
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--primary);
+            text-decoration: none;
+            letter-spacing: -1px;
+        }
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-top: 20px;
+            text-align: center;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 600;
+            margin-top: 30px;
+            border-bottom: 1px solid #E5E5EA;
+            padding-bottom: 10px;
+        }
+        p, li {
+            font-size: 16px;
+            color: #3A3A3C;
+        }
+        .last-updated {
+            color: var(--secondary);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            border-top: 1px solid #E5E5EA;
+            padding-top: 20px;
+            color: var(--secondary);
+            font-size: 14px;
+        }
+        @media (max-width: 600px) {
+            .lang-selector {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="lang-selector">
+                <select id="langSelect" onchange="changeLang(this.value)">
+                    <option value="en">English</option>
+                    <option value="vi">Tiếng Việt</option>
+                    <option value="zh">简体中文</option>
+                    <option value="es">Español (América Latina)</option>
+                    <option value="pt">Português (Brasil)</option>
+                </select>
+            </div>
+            <div class="logo">Love Lock</div>
+            <h1 id="mainTitle">Privacy Policy</h1>
+            <div id="lastUpdated" class="last-updated">Last Updated: May 15, 2026</div>
+        </header>
+
+        <div id="content">
+            <!-- Content will be injected here -->
+        </div>
+
+        <footer>
+            &copy; 2026 Love Lock. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "Privacy Policy",
+                updated: "Last Updated: May 15, 2026",
+                intro: "Welcome to <strong>Love Lock</strong>. Your privacy is critically important to us. This Privacy Policy explains how we collect, use, and protect your information when you use our mobile application.",
+                sections: [
+                    {
+                        h2: "1. Information We Collect",
+                        p: "We collect information to provide a better experience to all our users:",
+                        ul: [
+                            "<strong>Account Information:</strong> When you sign in (via Google, Apple, or Guest), we store your basic profile information such as UID, display name, and gender.",
+                            "<strong>Shared Content:</strong> 'Locks' (memories), locations, and photos you upload are stored securely in our private database to be shared only with your designated partner.",
+                            "<strong>Location Data:</strong> We use your location to display your position on the map and allow you to pin 'Locks'. Location data is only accessed when the app is in use."
+                        ]
+                    },
+                    {
+                        h2: "2. How We Use Information",
+                        p: "We use the information collected to:",
+                        ul: [
+                            "Provide, maintain, and improve the Love Lock features.",
+                            "Sync memories and financial goals between you and your partner.",
+                            "Analyze app performance and fix technical issues."
+                        ]
+                    },
+                    {
+                        h2: "3. Data Sharing and Security",
+                        p: "<strong>We do not sell your personal data to third parties.</strong> Data is shared only between you and the partner you explicitly connect with via a pairing code.",
+                        extra: "We use industry-standard security measures (Firebase Authentication and Security Rules) to ensure your data is protected from unauthorized access."
+                    },
+                    {
+                        h2: "4. Third-Party Services",
+                        p: "Love Lock uses the following third-party services:",
+                        ul: [
+                            "<strong>Google Firebase:</strong> For authentication, database (Firestore), and storage.",
+                            "<strong>MapLibre / MapTiler:</strong> To provide the mapping and geocoding services.",
+                            "<strong>Google Mobile Ads (AdMob):</strong> To display advertisements in the free version of the app."
+                        ]
+                    },
+                    {
+                        h2: "5. Your Rights and Data Deletion",
+                        p: "You have the right to access, update, or delete your information at any time. You can delete your account and all associated data (memories, photos, profile) directly from the <strong>Settings</strong> menu within the app."
+                    },
+                    {
+                        h2: "6. Contact Us",
+                        p: "If you have any questions about this Privacy Policy, please contact us at:",
+                        contact: "Email: <a href='mailto:hiepgoldtran@gmail.com' style='color: var(--primary);'>hiepgoldtran@gmail.com</a>"
+                    }
+                ]
+            },
+            vi: {
+                title: "Chính sách Bảo mật",
+                updated: "Cập nhật lần cuối: 15 tháng 5, 2026",
+                intro: "Chào mừng bạn đến với <strong>Love Lock</strong>. Quyền riêng tư của bạn cực kỳ quan trọng đối với chúng tôi. Chính sách Bảo mật này giải thích cách chúng tôi thu thập, sử dụng và bảo vệ thông tin của bạn khi bạn sử dụng ứng dụng di động của chúng tôi.",
+                sections: [
+                    {
+                        h2: "1. Thông tin Chúng tôi Thu thập",
+                        p: "Chúng tôi thu thập thông tin để cung cấp trải nghiệm tốt hơn cho tất cả người dùng:",
+                        ul: [
+                            "<strong>Thông tin Tài khoản:</strong> Khi bạn đăng nhập (qua Google, Apple hoặc Khách), chúng tôi lưu trữ thông tin hồ sơ cơ bản như UID, tên hiển thị và giới tính.",
+                            "<strong>Nội dung Chia sẻ:</strong> Các 'Ổ khóa' (kỷ niệm), vị trí và ảnh bạn tải lên được lưu trữ an toàn trong cơ sở dữ liệu riêng tư để chỉ chia sẻ với đối tác được chỉ định của bạn.",
+                            "<strong>Dữ liệu Vị trí:</strong> Chúng tôi sử dụng vị trí của bạn để hiển thị vị trí của bạn trên bản đồ và cho phép bạn ghim các 'Ổ khóa'. Dữ liệu vị trí chỉ được truy cập khi ứng dụng đang được sử dụng."
+                        ]
+                    },
+                    {
+                        h2: "2. Cách Chúng tôi Sử dụng Thông tin",
+                        p: "Chúng tôi sử dụng thông tin thu thập được để:",
+                        ul: [
+                            "Cung cấp, duy trì và cải thiện các tính năng của Love Lock.",
+                            "Đồng bộ hóa kỷ niệm và mục tiêu tài chính giữa bạn và đối tác của bạn.",
+                            "Phân tích hiệu suất ứng dụng và khắc phục sự cố kỹ thuật."
+                        ]
+                    },
+                    {
+                        h2: "3. Chia sẻ và Bảo mật Dữ liệu",
+                        p: "<strong>Chúng tôi không bán dữ liệu cá nhân của bạn cho bên thứ ba.</strong> Dữ liệu chỉ được chia sẻ giữa bạn và đối tác mà bạn kết nối rõ ràng qua mã ghép đôi.",
+                        extra: "Chúng tôi sử dụng các biện pháp bảo mật tiêu chuẩn ngành (Firebase Authentication và Security Rules) để đảm bảo dữ liệu của bạn được bảo vệ khỏi sự truy cập trái phép."
+                    },
+                    {
+                        h2: "4. Dịch vụ của Bên thứ ba",
+                        p: "Love Lock sử dụng các dịch vụ bên thứ ba sau:",
+                        ul: [
+                            "<strong>Google Firebase:</strong> Để xác thực, cơ sở dữ liệu (Firestore) và lưu trữ.",
+                            "<strong>MapLibre / MapTiler:</strong> Để cung cấp dịch vụ bản đồ và mã hóa địa lý.",
+                            "<strong>Google Mobile Ads (AdMob):</strong> Để hiển thị quảng cáo trong phiên bản miễn phí của ứng dụng."
+                        ]
+                    },
+                    {
+                        h2: "5. Quyền của Bạn và Xóa Dữ liệu",
+                        p: "Bạn có quyền truy cập, cập nhật hoặc xóa thông tin của mình bất cứ lúc nào. Bạn có thể xóa tài khoản và tất cả dữ liệu liên quan (kỷ niệm, ảnh, hồ sơ) trực tiếp từ menu <strong>Cài đặt</strong> trong ứng dụng."
+                    },
+                    {
+                        h2: "6. Liên hệ với Chúng tôi",
+                        p: "Nếu bạn có bất kỳ câu hỏi nào về Chính sách Bảo mật này, vui lòng liên hệ với chúng tôi tại:",
+                        contact: "Email: <a href='mailto:hiepgoldtran@gmail.com' style='color: var(--primary);'>hiepgoldtran@gmail.com</a>"
+                    }
+                ]
+            },
+            zh: {
+                title: "隐私政策",
+                updated: "最后更新：2026年5月15日",
+                intro: "欢迎使用 <strong>Love Lock</strong>。您的隐私对我们至关重要。本隐私政策解释了当您使用我们的移动应用程序时，我们如何收集、使用和保护您的信息。",
+                sections: [
+                    {
+                        h2: "1. 我们收集的信息",
+                        p: "我们收集信息是为了给所有用户提供更好的体验：",
+                        ul: [
+                            "<strong>账户信息：</strong> 当您登录（通过 Google、Apple 或访客）时，我们会存储您的基本个人资料信息，如 UID、显示名称和性别。",
+                            "<strong>分享内容：</strong> 您上传的“锁”（回忆）、位置和照片都安全地存储在我们的私有数据库中，仅与您指定的伴侣共享。",
+                            "<strong>位置数据：</strong> 我们使用您的位置在地图上显示您的位置，并允许您固定“锁”。位置数据仅在应用程序使用时访问。"
+                        ]
+                    },
+                    {
+                        h2: "2. 我们如何使用信息",
+                        p: "我们将收集的信息用于：",
+                        ul: [
+                            "提供、维护和改进 Love Lock 的功能。",
+                            "在您和您的伴侣之间同步回忆和财务目标。",
+                            "分析应用程序性能并修复技术问题。"
+                        ]
+                    },
+                    {
+                        h2: "3. 数据共享与安全",
+                        p: "<strong>我们不会向第三方出售您的个人数据。</strong> 数据仅在您与通过配对码明确连接的伴侣之间共享。",
+                        extra: "我们使用行业标准的安全措施（Firebase 身份验证和安全规则）来确保您的数据免受未经授权的访问。"
+                    },
+                    {
+                        h2: "4. 第三方服务",
+                        p: "Love Lock 使用以下第三方服务：",
+                        ul: [
+                            "<strong>Google Firebase：</strong> 用于身份验证、数据库 (Firestore) 和存储。",
+                            "<strong>MapLibre / MapTiler：</strong> 提供地图和地理编码服务。",
+                            "<strong>Google Mobile Ads (AdMob)：</strong> 在应用程序的免费版本中显示广告。"
+                        ]
+                    },
+                    {
+                        h2: "5. 您的权利与数据删除",
+                        p: "您有权随时访问、更新或删除您的信息。您可以直接从应用程序内的<strong>设置</strong>菜单删除您的账户及所有相关数据（回忆、照片、个人资料）。"
+                    },
+                    {
+                        h2: "6. 联系我们",
+                        p: "如果您对本隐私政策有任何疑问，请通过以下方式联系我们：",
+                        contact: "电子邮件：<a href='mailto:hiepgoldtran@gmail.com' style='color: var(--primary);'>hiepgoldtran@gmail.com</a>"
+                    }
+                ]
+            },
+            es: {
+                title: "Política de Privacidad",
+                updated: "Última actualización: 15 de mayo de 2026",
+                intro: "Bienvenido a <strong>Love Lock</strong>. Su privacidad es fundamental para nosotros. Esta Política de Privacidad explica cómo recopilamos, usamos y protegemos su información cuando utiliza nuestra aplicación móvil.",
+                sections: [
+                    {
+                        h2: "1. Información que Recopilamos",
+                        p: "Recopilamos información para brindar una mejor experiencia a todos nuestros usuarios:",
+                        ul: [
+                            "<strong>Información de la Cuenta:</strong> Cuando inicia sesión (a través de Google, Apple o Invitado), almacenamos su información de perfil básica, como UID, nombre de usuario y género.",
+                            "<strong>Contenido Compartido:</strong> Los 'Candados' (recuerdos), ubicaciones y fotos que cargue se almacenan de forma segura en nuestra base de datos privada para compartirlos únicamente con su pareja designada.",
+                            "<strong>Datos de Ubicación:</strong> Utilizamos su ubicación para mostrar su posición en el mapa y permitirle fijar 'Candados'. Solo se accede a los datos de ubicación cuando la aplicación está en uso."
+                        ]
+                    },
+                    {
+                        h2: "2. Cómo Utilizamos la Información",
+                        p: "Utilizamos la información recopilada para:",
+                        ul: [
+                            "Proporcionar, mantener y mejorar las funciones de Love Lock.",
+                            "Sincronizar recuerdos y metas financieras entre usted y su pareja.",
+                            "Analizar el rendimiento de la aplicación y corregir problemas técnicos."
+                        ]
+                    },
+                    {
+                        h2: "3. Intercambio de Datos y Seguridad",
+                        p: "<strong>No vendemos sus datos personales a terceros.</strong> Los datos se comparten únicamente entre usted y la pareja con la que se conecta explícitamente mediante un código de vinculación.",
+                        extra: "Utilizamos medidas de seguridad estándar de la industria (Autenticación de Firebase y Reglas de Seguridad) para garantizar que sus datos estén protegidos contra el acceso no autorizado."
+                    },
+                    {
+                        h2: "4. Servicios de Terceros",
+                        p: "Love Lock utiliza los siguientes servicios de terceros:",
+                        ul: [
+                            "<strong>Google Firebase:</strong> Para autenticación, base de datos (Firestore) y almacenamiento.",
+                            "<strong>MapLibre / MapTiler:</strong> Para proporcionar los servicios de mapas y geocodificación.",
+                            "<strong>Google Mobile Ads (AdMob):</strong> Para mostrar anuncios en la versión gratuita de la aplicación."
+                        ]
+                    },
+                    {
+                        h2: "5. Sus Derechos y Eliminación de Datos",
+                        p: "Tiene derecho a acceder, actualizar o eliminar su información en cualquier momento. Puede eliminar su cuenta y todos los datos asociados (recuerdos, fotos, perfil) directamente desde el menú <strong>Configuración</strong> dentro de la aplicación."
+                    },
+                    {
+                        h2: "6. Contáctenos",
+                        p: "Si tiene alguna pregunta sobre esta Política de Privacidad, contáctenos en:",
+                        contact: "Correo electrónico: <a href='mailto:hiepgoldtran@gmail.com' style='color: var(--primary);'>hiepgoldtran@gmail.com</a>"
+                    }
+                ]
+            },
+            pt: {
+                title: "Política de Privacidade",
+                updated: "Última Atualização: 15 de maio de 2026",
+                intro: "Bem-vindo ao <strong>Love Lock</strong>. Sua privacidade é fundamental para nós. Esta Política de Privacidade explica como coletamos, usamos e protegemos suas informações ao usar nosso aplicativo móvel.",
+                sections: [
+                    {
+                        h2: "1. Informações que Coletamos",
+                        p: "Coletamos informações para oferecer uma experiência melhor a todos os nossos usuários:",
+                        ul: [
+                            "<strong>Informações da Conta:</strong> Quando você faz login (via Google, Apple ou Convidado), armazenamos suas informações básicas de perfil, como UID, nome de exibição e gênero.",
+                            "<strong>Conteúdo Compartilhado:</strong> 'Cadeados' (memórias), locais e fotos que você envia são armazenados com segurança em nosso banco de dados privado para serem compartilhados apenas com seu parceiro designado.",
+                            "<strong>Dados de Localização:</strong> Usamos sua localização para exibir sua posição no mapa e permitir que você fixe 'Cadeados'. Os dados de localização são acessados apenas quando o aplicativo está em uso."
+                        ]
+                    },
+                    {
+                        h2: "2. Como Usamos as Informações",
+                        p: "Usamos as informações coletadas para:",
+                        ul: [
+                            "Fornecer, manter e melhorar os recursos do Love Lock.",
+                            "Sincronizar memórias e metas financeiras entre você e seu parceiro.",
+                            "Analisar o desempenho do aplicativo e corrigir problemas técnicos."
+                        ]
+                    },
+                    {
+                        h2: "3. Compartilhamento de Dados e Segurança",
+                        p: "<strong>Não vendemos seus dados pessoais para terceiros.</strong> Os dados são compartilhados apenas entre você e o parceiro com quem você se conecta explicitamente por meio de um código de emparelhamento.",
+                        extra: "Usamos medidas de segurança padrão da indústria (Autenticação Firebase e Regras de Segurança) para garantir que seus dados sejam protegidos contra acesso não autorizado."
+                    },
+                    {
+                        h2: "4. Serviços de Terceiros",
+                        p: "O Love Lock usa os seguintes serviços de terceiros:",
+                        ul: [
+                            "<strong>Google Firebase:</strong> Para autenticação, banco de datos (Firestore) e armazenamento.",
+                            "<strong>MapLibre / MapTiler:</strong> Para fornecer os serviços de mapeamento e geocodificação.",
+                            "<strong>Google Mobile Ads (AdMob):</strong> Para exibir anúncios na versão gratuita do aplicativo."
+                        ]
+                    },
+                    {
+                        h2: "5. Seus Direitos e Exclusão de Dados",
+                        p: "Você tem o direito de acessar, atualizar ou excluir suas informações a qualquer momento. Você pode excluir sua conta e todos os dados associados (memórias, fotos, perfil) diretamente do menu <strong>Configurações</strong> no aplicativo."
+                    },
+                    {
+                        h2: "6. Contato",
+                        p: "Se você tiver alguma dúvida sobre esta Política de Privacidade, entre em contato conosco em:",
+                        contact: "E-mail: <a href='mailto:hiepgoldtran@gmail.com' style='color: var(--primary);'>hiepgoldtran@gmail.com</a>"
+                    }
+                ]
+            }
+        };
+
+        function changeLang(lang) {
+            const t = translations[lang] || translations.en;
+            document.getElementById('mainTitle').innerText = t.title;
+            document.getElementById('lastUpdated').innerText = t.updated;
+            
+            let html = `<p>${t.intro}</p>`;
+            t.sections.forEach(s => {
+                html += `<h2>${s.h2}</h2>`;
+                html += `<p>${s.p}</p>`;
+                if (s.ul) {
+                    html += `<ul>${s.ul.map(item => `<li>${item}</li>`).join('')}</ul>`;
+                }
+                if (s.extra) {
+                    html += `<p>${s.extra}</p>`;
+                }
+                if (s.contact) {
+                    html += `<p>${s.contact}</p>`;
+                }
+            });
+            document.getElementById('content').innerHTML = html;
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize with browser language or default
+        const browserLang = navigator.language.split('-')[0];
+        const initialLang = translations[browserLang] ? browserLang : 'en';
+        document.getElementById('langSelect').value = initialLang;
+        changeLang(initialLang);
+    </script>
+</body>
+</html>

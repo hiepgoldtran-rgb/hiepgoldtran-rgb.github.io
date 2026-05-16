@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support | Love Lock</title>
+    <style>
+        :root {
+            --primary: #FF2D55;
+            --text: #1C1C1E;
+            --secondary: #8E8E93;
+            --bg: #FAFAFA;
+            --card: #FFFFFF;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text);
+            background: var(--bg);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        header {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        select {
+            padding: 8px 12px;
+            border-radius: 8px;
+            border: 1px solid #E5E5EA;
+            background: var(--card);
+            font-size: 14px;
+            outline: none;
+            cursor: pointer;
+        }
+        .logo {
+            font-size: 40px;
+            font-weight: 800;
+            color: var(--primary);
+            margin-bottom: 20px;
+            letter-spacing: -1.5px;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .intro-p {
+            font-size: 18px;
+            color: #3A3A3C;
+            margin-bottom: 40px;
+        }
+        .contact-card {
+            background: white;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 40px;
+        }
+        .email-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 16px 32px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 18px;
+            transition: transform 0.2s;
+        }
+        .email-link:hover {
+            transform: scale(1.05);
+        }
+        .faq {
+            text-align: left;
+            margin-top: 60px;
+        }
+        .faq h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .faq-item {
+            margin-bottom: 20px;
+        }
+        .faq-q {
+            font-weight: 600;
+            color: var(--text);
+        }
+        .faq-a {
+            color: var(--secondary);
+            font-size: 15px;
+        }
+        footer {
+            margin-top: 80px;
+            color: var(--secondary);
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <select id="langSelect" onchange="changeLang(this.value)">
+                <option value="en">English</option>
+                <option value="vi">Tiếng Việt</option>
+                <option value="zh">简体中文</option>
+                <option value="es">Español (América Latina)</option>
+                <option value="pt">Português (Brasil)</option>
+            </select>
+        </header>
+
+        <div class="logo">Love Lock</div>
+        <h1 id="mainTitle">How can we help?</h1>
+        <p id="introP" class="intro-p">We're here to ensure your experience with Love Lock is as seamless as your connection with your partner.</p>
+
+        <div class="contact-card">
+            <p id="contactLabel" style="margin-bottom: 20px; font-weight: 600;">Direct Support</p>
+            <a href="mailto:hiepgoldtran@gmail.com" class="email-link" id="emailBtn">Email Us</a>
+            <p style="margin-top: 20px; font-size: 14px; color: var(--secondary);">hiepgoldtran@gmail.com</p>
+        </div>
+
+        <div id="faqSection" class="faq">
+            <!-- FAQ content will be injected here -->
+        </div>
+
+        <footer>
+            &copy; 2026 Love Lock. All rights reserved.
+        </footer>
+    </div>
+
+    <script>
+        const translations = {
+            en: {
+                title: "How can we help?",
+                intro: "We're here to ensure your experience with Love Lock is as seamless as your connection with your partner.",
+                contactLabel: "Direct Support",
+                emailBtn: "Email Us",
+                faqTitle: "Frequently Asked Questions",
+                faqs: [
+                    { q: "How do I connect with my partner?", a: "Go to Settings, tap 'Connect with Partner', and share the generated code with your partner. Once they enter it, you'll be linked!" },
+                    { q: "Can I delete a specific memory?", a: "Yes, just tap on the 'Lock' on the map, select the detail, and use the delete option in the top corner." },
+                    { q: "What happens if I delete my account?", a: "All your data, including photos, shared memories, and connection status, will be permanently removed from our servers." }
+                ]
+            },
+            vi: {
+                title: "Chúng tôi có thể giúp gì cho bạn?",
+                intro: "Chúng tôi luôn sẵn sàng đảm bảo trải nghiệm của bạn với Love Lock mượt mà như chính tình cảm của hai bạn.",
+                contactLabel: "Hỗ trợ Trực tiếp",
+                emailBtn: "Gửi Email cho chúng tôi",
+                faqTitle: "Câu hỏi Thường gặp",
+                faqs: [
+                    { q: "Làm thế nào để kết nối với đối tác của tôi?", a: "Vào Cài đặt, nhấn 'Kết nối với Đối tác' và chia sẻ mã đã tạo cho đối tác của bạn. Khi họ nhập mã đó, hai bạn sẽ được liên kết!" },
+                    { q: "Tôi có thể xóa một kỷ niệm cụ thể không?", a: "Có, chỉ cần nhấn vào 'Ổ khóa' trên bản đồ, chọn chi tiết và sử dụng tùy chọn xóa ở góc trên." },
+                    { q: "Điều gì xảy ra nếu tôi xóa tài khoản?", a: "Tất cả dữ liệu của bạn, bao gồm ảnh, kỷ niệm đã chia sẻ và trạng thái kết nối, sẽ bị xóa vĩnh viễn khỏi máy chủ của chúng tôi." }
+                ]
+            },
+            zh: {
+                title: "我们能为您提供什么帮助？",
+                intro: "我们致力于确保您在 Love Lock 中的体验如您与伴侣的联系一样顺畅。",
+                contactLabel: "直接支持",
+                emailBtn: "给我们发邮件",
+                faqTitle: "常见问题",
+                faqs: [
+                    { q: "如何与我的伴侣连接？", a: "前往“设置”，点击“与伴侣连接”，然后将生成的代码分享给您的伴侣。一旦他们输入代码，你们就会建立连接！" },
+                    { q: "我可以删除特定的回忆吗？", a: "可以，只需点击地图上的“锁”，选择详情，然后使用右上角的删除选项。" },
+                    { q: "如果我删除账户会发生什么？", a: "您的所有数据，包括照片、共享回忆和连接状态，都将从我们的服务器中永久移除。" }
+                ]
+            },
+            es: {
+                title: "¿Cómo podemos ayudarte?",
+                intro: "Estamos aquí para asegurar que tu experiencia con Love Lock sea tan fluida como la conexión con tu pareja.",
+                contactLabel: "Soporte Directo",
+                emailBtn: "Envíanos un correo",
+                faqTitle: "Preguntas Frecuentes",
+                faqs: [
+                    { q: "¿Cómo me conecto con mi pareja?", a: "Ve a Configuración, toca 'Conectar con pareja' y comparte el código generado con tu pareja. Una vez que lo ingresen, ¡estarán vinculados!" },
+                    { q: "¿Puedo eliminar un recuerdo específico?", a: "Sí, solo toca el 'Candado' en el mapa, selecciona el detalle y usa la opción de eliminar en la esquina superior." },
+                    { q: "¿Qué sucede si elimino mi cuenta?", a: "Todos sus datos, incluidas las fotos, los recuerdos compartidos y el estado de la conexión, se eliminarán de forma permanente de nuestros servidores." }
+                ]
+            },
+            pt: {
+                title: "Como podemos ajudar?",
+                intro: "Estamos aqui para garantir que sua experiência com o Love Lock seja tão perfeita quanto sua conexão com seu parceiro.",
+                contactLabel: "Suporte Direto",
+                emailBtn: "Envie um e-mail",
+                faqTitle: "Perguntas Frequentes",
+                faqs: [
+                    { q: "Como faço para me conectar com meu parceiro?", a: "Vá em Configurações, toque em 'Conectar com parceiro' e compartilhe o código gerado com seu parceiro. Assim que eles o inserirem, vocês estarão vinculados!" },
+                    { q: "Posso excluir uma memória específica?", a: "Sim, basta tocar no 'Cadeado' no mapa, selecionar o detalhe e usar a opção de exclusão no canto superior." },
+                    { q: "O que acontece se eu excluir minha conta?", a: "Todos os seus dados, incluindo fotos, memórias compartilhadas e status de conexão, serão removidos permanentemente de nossos servidores." }
+                ]
+            }
+        };
+
+        function changeLang(lang) {
+            const t = translations[lang] || translations.en;
+            document.getElementById('mainTitle').innerText = t.title;
+            document.getElementById('introP').innerText = t.intro;
+            document.getElementById('contactLabel').innerText = t.contactLabel;
+            document.getElementById('emailBtn').innerText = t.emailBtn;
+            
+            let html = `<h2>${t.faqTitle}</h2>`;
+            t.faqs.forEach(f => {
+                html += `
+                    <div class="faq-item">
+                        <div class="faq-q">${f.q}</div>
+                        <div class="faq-a">${f.a}</div>
+                    </div>
+                `;
+            });
+            document.getElementById('faqSection').innerHTML = html;
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize with browser language or default
+        const browserLang = navigator.language.split('-')[0];
+        const initialLang = translations[browserLang] ? browserLang : 'en';
+        document.getElementById('langSelect').value = initialLang;
+        changeLang(initialLang);
+    </script>
+</body>
+</html>
