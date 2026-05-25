@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Support — Aladdin's Wishes</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --fg: #1a1a1a;
+    --muted: #555;
+    --border: #e0e0e0;
+    --accent: #6b46c1;
+    --card-bg: #faf9ff;
+    --code-bg: #f5f5f5;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+                 "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 24px 96px;
+  }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 16px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  h1 { font-size: 28px; margin: 0 0 4px; }
+  .subtitle { color: var(--muted); font-size: 14px; }
+  .lang-switch {
+    display: inline-flex;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .lang-switch button {
+    background: transparent;
+    border: 0;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--fg);
+    font-family: inherit;
+  }
+  .lang-switch button.active { background: var(--accent); color: #fff; }
+  h2 { font-size: 20px; margin-top: 36px; margin-bottom: 8px; color: var(--accent); }
+  h3 { font-size: 16px; margin-top: 20px; margin-bottom: 6px; }
+  p, ul, ol { margin: 8px 0; }
+  ul, ol { padding-left: 22px; }
+  li { margin: 4px 0; }
+  code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+  }
+  a { color: var(--accent); }
+  .contact-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px 24px;
+    margin: 16px 0;
+  }
+  .contact-card p { margin: 4px 0; }
+  .contact-card .email {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 10px 0 4px;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--border);
+    padding: 12px 0;
+  }
+  .faq-item:last-child { border-bottom: 0; }
+  .faq-q {
+    font-weight: 600;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .faq-q::after {
+    content: "+";
+    font-size: 20px;
+    line-height: 1.2;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  details[open] .faq-q::after { content: "−"; }
+  .faq-a { margin-top: 8px; color: var(--muted); }
+  .response-time {
+    display: inline-block;
+    background: #ede9fe;
+    color: var(--accent);
+    font-size: 13px;
+    border-radius: 6px;
+    padding: 3px 10px;
+    margin-top: 6px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 13px;
+    margin-top: 48px;
+    border-top: 1px solid var(--border);
+    padding-top: 16px;
+  }
+  [data-lang] { display: none; }
+  [data-lang].active { display: block; }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div>
+      <h1>Support</h1>
+      <div class="subtitle">Aladdin's Wishes — <code>com.sabaworks.aladdinwishes</code></div>
+    </div>
+    <div class="lang-switch" role="tablist">
+      <button data-target="en" class="active" type="button">English</button>
+      <button data-target="zh" type="button">简体中文</button>
+    </div>
+  </header>
+
+  <!-- ============ ENGLISH ============ -->
+  <section data-lang="en" class="active">
+
+    <h2>Contact Us</h2>
+    <div class="contact-card">
+      <p>Have a question or found a bug? We're here to help.</p>
+      <div class="email"><a href="mailto:hiepgoldtran@gmail.com">hiepgoldtran@gmail.com</a></div>
+      <div class="response-time">Response within 2 business days</div>
+    </div>
+    <p>When reporting an issue, please include:</p>
+    <ul>
+      <li>iPhone model and iOS version (Settings → General → About)</li>
+      <li>App version (visible on the main menu screen)</li>
+      <li>A short description of what happened and how to reproduce it</li>
+      <li>Screenshot or screen recording if possible</li>
+    </ul>
+
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">Is this game free to play?</summary>
+        <div class="faq-a">Yes. Aladdin's Wishes is completely free. There are no in-app purchases, no subscription, and no real-money transactions of any kind. Ads are shown to support development.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">Can I win real money?</summary>
+        <div class="faq-a">No. This is a simulated casino game for entertainment only. Virtual coins have no monetary value and cannot be redeemed, exchanged, or transferred for real money or prizes.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">My coin balance is gone after reinstalling. Can I recover it?</summary>
+        <div class="faq-a">Game progress is stored locally on your device only and is not backed up to iCloud or any server. Uninstalling the app permanently deletes your saved data. We are unable to restore balances. This is by design to protect your privacy.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">My coins are not the same on two devices. Why?</summary>
+        <div class="faq-a">Progress is per-device and intentionally not synced across devices. Each device keeps its own independent save data.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">The game is not loading or crashing. What should I do?</summary>
+        <div class="faq-a">
+          Try these steps in order:
+          <ol>
+            <li>Force-close the app and reopen it.</li>
+            <li>Restart your iPhone.</li>
+            <li>Check that you have iOS 14.0 or later (Settings → General → About → Software Version).</li>
+            <li>Delete the app and reinstall from the App Store.</li>
+          </ol>
+          If the issue persists, please email us with your device model and iOS version.
+        </div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">I'm seeing ads I don't want. Can I turn them off?</summary>
+        <div class="faq-a">Ads support the free game. To reduce ad personalization, you can select "Ask App Not to Track" in the App Tracking Transparency prompt, or adjust your iOS privacy settings under Settings → Privacy & Security → Tracking.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">The game doesn't work without internet. Is that expected?</summary>
+        <div class="faq-a">Yes. Aladdin's Wishes is fully offline. Gameplay does not require an internet connection. Ads may not load without connectivity, but the game itself will run normally.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">How do I change the game language?</summary>
+        <div class="faq-a">The game follows your device language. Go to Settings → General → Language &amp; Region → iPhone Language. Set to English or 简体中文 (Simplified Chinese) and relaunch the app.</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">How do I request deletion of my data?</summary>
+        <div class="faq-a">The app stores no personal data on our servers. All game data is local to your device — deleting the app removes it completely. For ad-related data held by Google, visit <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com/data-and-privacy</a>.</div>
+      </details>
+    </div>
+
+    <h2>About the App</h2>
+    <p>Aladdin's Wishes is an offline, free-to-play simulated slot machine game. It contains no real-money gambling mechanics. The app is rated <strong>17+</strong> on the App Store and requires users to confirm they are at least 18 years old before playing.</p>
+    <p><strong>Privacy Policy:</strong> <a href="aladdin-privacy.html">View Privacy Policy</a></p>
+
+  </section>
+
+  <!-- ============ 简体中文 ============ -->
+  <section data-lang="zh">
+
+    <h2>联系我们</h2>
+    <div class="contact-card">
+      <p>有疑问或发现了问题？欢迎随时联系我们。</p>
+      <div class="email"><a href="mailto:hiepgoldtran@gmail.com">hiepgoldtran@gmail.com</a></div>
+      <div class="response-time">2 个工作日内回复</div>
+    </div>
+    <p>反馈问题时，请附上以下信息：</p>
+    <ul>
+      <li>iPhone 型号及 iOS 版本（设置 → 通用 → 关于本机）</li>
+      <li>应用版本号（在主菜单界面可见）</li>
+      <li>问题的简要描述及复现步骤</li>
+      <li>如有截图或屏幕录像，请一并附上</li>
+    </ul>
+
+    <h2>常见问题</h2>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">这款游戏是免费的吗？</summary>
+        <div class="faq-a">是的，Aladdin's Wishes 完全免费。没有应用内购买、订阅或任何形式的真实货币交易。游戏通过广告获得支持。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">我能赢取真实货币吗？</summary>
+        <div class="faq-a">不能。本游戏为纯娱乐模拟赌场游戏。游戏内的虚拟金币没有任何货币价值，无法兑换、变现或转让为真实货币或奖品。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">重新安装后金币余额消失了，能找回吗？</summary>
+        <div class="faq-a">游戏进度仅保存在您的设备本地，不会备份至 iCloud 或任何服务器。卸载应用将永久删除存档数据，我们无法恢复余额。此设计旨在保护您的隐私。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">两台设备上的金币数量不一样，为什么？</summary>
+        <div class="faq-a">游戏进度以设备为单位独立保存，不会在设备间同步。每台设备均有各自独立的存档数据。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">游戏无法加载或频繁崩溃，怎么办？</summary>
+        <div class="faq-a">
+          请依次尝试以下步骤：
+          <ol>
+            <li>强制关闭应用后重新打开。</li>
+            <li>重启 iPhone。</li>
+            <li>确认 iOS 版本为 14.0 或更高（设置 → 通用 → 关于本机 → 软件版本）。</li>
+            <li>删除应用后从 App Store 重新安装。</li>
+          </ol>
+          如问题持续，请发送邮件并注明设备型号及 iOS 版本，我们将为您协助排查。
+        </div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">我不想看到某些广告，能关闭吗？</summary>
+        <div class="faq-a">广告是游戏免费运营的支持来源。如需减少个性化广告，您可在应用追踪透明度弹窗中选择"要求应用不要追踪"，或在 设置 → 隐私与安全性 → 跟踪 中调整相关权限。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">没有网络游戏就无法运行，这正常吗？</summary>
+        <div class="faq-a">是的，Aladdin's Wishes 是完全离线游戏。游戏玩法无需联网。无网络时广告可能无法加载，但游戏本身可正常运行。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">如何切换游戏语言？</summary>
+        <div class="faq-a">游戏语言跟随设备语言。前往 设置 → 通用 → 语言与地区 → iPhone 语言，设置为 English 或简体中文，重新启动应用后生效。</div>
+      </details>
+    </div>
+
+    <div class="faq-item">
+      <details>
+        <summary class="faq-q">如何申请删除我的数据？</summary>
+        <div class="faq-a">本应用不在我们的服务器上存储任何个人数据。所有游戏数据仅保存在您的设备本地——卸载应用即可彻底删除。如需处理 Google 广告相关数据，请访问 <a href="https://myaccount.google.com/data-and-privacy" target="_blank" rel="noopener">myaccount.google.com/data-and-privacy</a>。</div>
+      </details>
+    </div>
+
+    <h2>关于本应用</h2>
+    <p>Aladdin's Wishes 是一款免费的离线模拟老虎机游戏，不含任何真实货币赌博机制。本应用在 App Store 的年龄评级为 <strong>17+</strong>，并要求用户在开始游戏前确认已年满 18 周岁。</p>
+    <p><strong>隐私政策：</strong><a href="aladdin-privacy.html">查看隐私政策</a></p>
+
+  </section>
+
+  <div class="meta">
+    <p>Bundle ID: <code>com.sabaworks.aladdinwishes</code> · <a href="aladdin-privacy.html">Privacy Policy</a></p>
+  </div>
+</div>
+
+<script>
+  (function () {
+    const buttons = document.querySelectorAll('.lang-switch button');
+    const sections = document.querySelectorAll('[data-lang]');
+    function setLang(lang) {
+      buttons.forEach(b => b.classList.toggle('active', b.dataset.target === lang));
+      sections.forEach(s => s.classList.toggle('active', s.dataset.lang === lang));
+      document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en';
+      try { localStorage.setItem('aladdin_support_lang', lang); } catch (e) {}
+    }
+    buttons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.target)));
+    let initial = 'en';
+    try {
+      const saved = localStorage.getItem('aladdin_support_lang');
+      if (saved === 'en' || saved === 'zh') initial = saved;
+      else if ((navigator.language || '').toLowerCase().startsWith('zh')) initial = 'zh';
+    } catch (e) {}
+    setLang(initial);
+  })();
+</script>
+</body>
+</html>
